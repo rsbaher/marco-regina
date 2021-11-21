@@ -1,4 +1,4 @@
-export default ({
+export default function Textbox({
   error,
   name,
   onChange,
@@ -7,23 +7,25 @@ export default ({
   title,
   touched,
   value
-}) => (
-  <div style={Object.assign({}, style, styles.container)}>
-    <label style={styles.label} htmlFor={`id-${name}`}>
-      {title}
-    </label>
-    <input
-      id={`id-${name}`}
-      type="text"
-      name={name}
-      onChange={onChange}
-      onBlur={onBlur}
-      value={value}
-      style={styles.input}
-    />
-    {touched && error && <div style={styles.error}>{error}</div>}
-  </div>
-)
+}) {
+  return (
+    <div style={Object.assign({}, style, styles.container)}>
+      <label style={styles.label} htmlFor={`id-${name}`}>
+        {title}
+      </label>
+      <input
+        id={`id-${name}`}
+        type="text"
+        name={name}
+        onChange={onChange}
+        onBlur={onBlur}
+        value={value}
+        style={styles.input}
+      />
+      {touched && error && <div style={styles.error}>{error}</div>}
+    </div>
+  )
+}
 
 const styles = {
   container: {

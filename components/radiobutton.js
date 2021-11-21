@@ -42,7 +42,7 @@ const Checkmark = styled.span`
   }
 `
 
-const RadioButton = ({
+const RadioButtonInput = ({
   id,
   caption,
   checked,
@@ -68,7 +68,7 @@ const RadioButton = ({
   </Container>
 )
 
-export default ({
+export default function RadioButton({
   error,
   name,
   onBlur,
@@ -77,10 +77,10 @@ export default ({
   selectedValue,
   title,
   touched
-}) => {
+}) {
   const renderRadiobuttons = () =>
     options.map(({ caption, value }) => (
-      <RadioButton
+      <RadioButtonInput
         caption={caption}
         checked={selectedValue == value}
         id={`id-${name}-${value}`}

@@ -39,7 +39,7 @@ const Checkmark = styled.span`
     transform: rotate(45deg) translate3d(-50%, -50%, 0);
   }
 `
-const Checkbox = ({ id, caption, checked, name, onBlur, onChange, value }) => (
+const CheckboxInput = ({ id, caption, checked, name, onBlur, onChange, value }) => (
   <Container>
     <label htmlFor={id}>
       {caption}
@@ -57,7 +57,7 @@ const Checkbox = ({ id, caption, checked, name, onBlur, onChange, value }) => (
   </Container>
 )
 
-export default ({
+export default function Checkbox ({
   error,
   name,
   onBlur,
@@ -66,7 +66,7 @@ export default ({
   selectedValues,
   title,
   touched
-}) => {
+}) {
   const handleCheckboxChange = e => {
     const target = e.currentTarget
     let valueArray = selectedValues || []
@@ -82,7 +82,7 @@ export default ({
 
   const renderCheckboxes = () =>
     options.map(({ caption, value }) => (
-      <Checkbox
+      <CheckboxInput
         caption={caption}
         checked={selectedValues && selectedValues.includes(value)}
         id={`id-${name}-${value}`}
