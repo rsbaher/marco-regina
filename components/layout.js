@@ -37,7 +37,7 @@ export default function Layout({ children }) {
                 <section style={styles.background} />
                 <div style={styles.container}>
                     <section style={styles.content0}>
-                        <Title>{ process.env.WEB_TITLE }</Title>
+                        <Title className="color-white">Marco & <br/> Regina</Title>
                     </section>
 
                     {children}
