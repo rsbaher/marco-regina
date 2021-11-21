@@ -5,6 +5,7 @@ import Card from '../components/card'
 import Link from 'next/link'
 import Button from './button'
 import CardTitle from './CardTitle'
+import React from 'react';
 
 const WeddingDetails = styled.div`
   display: grid;
@@ -46,7 +47,8 @@ const WeddingAddress = styled.div`
   color: #cba135;
 `
 export default function DetailsSection ({ children }) {
-  const DateFormat = "dddd, MMMM Do YYYY";
+  const wedDate = new Date(process.env.WEDDING_DATE);
+
   return (
     <>
         <Subtitle style={{ paddingTop: '2em', marginBottom: '.2em', marginTop: '0em' }}>
@@ -58,7 +60,7 @@ export default function DetailsSection ({ children }) {
         <WeddingDetails>
           <Card venue="sg" style={{ textAlign: 'right' }} className="background-color-light-pink">
             <CardTitle>Holy Matrimony</CardTitle>
-            <div>{ DateFormat }</div>
+            <div>{ wedDate.toDateString() }</div>
             <div className="weddingTime">{ process.env.WEDDING_TIME.ceremony }</div>
             <WeddingVenue
               href={ process.env.CEREMONY_ADDR.url }
@@ -76,7 +78,7 @@ export default function DetailsSection ({ children }) {
           </Card>
           <Card venue="jkt" className="background-color-light-pink">
             <CardTitle>Wedding Reception</CardTitle>
-            <div>{ DateFormat }</div>
+            <div>{ wedDate.toDateString() }</div>
             <div className="weddingTime">{ process.env.WEDDING_TIME.cocktail }</div>
             <WeddingVenue
               href={ process.env.RECEPTION_ADDR.url }
