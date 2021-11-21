@@ -74,7 +74,7 @@ body {
 }
 .content2 {
   grid-area: content2;
-  background-color: #ffcccc;
+  background-color: #FFCABA;
   padding-bottom: 4em;
 }
 .content3 {
@@ -104,7 +104,7 @@ body {
 
 .content2Button {
   background-color: #cba135;
-  color: #ffdcd3;
+  color: #FFCABA;
   font-size: 1em;
 }
 
@@ -150,15 +150,27 @@ body {
 }
 
 .color-light-pink {
-  color: #ffdcd3;
+  color: #ffdfd5;
 }
 
 .color-light-gold {
   color: #fff3e6;
 }
 
+.color-pink {
+  color: #FFCABA;
+}
+
+.background-color-pink {
+  background-color: #FFCABA;
+}
+
+.background-color-light-pink {
+  background-color: #ffdfd5;
+}
+
 .color-white {
-  color: #ffede9;
+  color: #ffe9e3;
 }
 
 .color-gold {

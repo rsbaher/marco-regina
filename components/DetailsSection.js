@@ -56,7 +56,7 @@ export default function DetailsSection ({ children }) {
         <CountdownSection />
         <br />
         <WeddingDetails>
-          <Card venue="sg" style={{ textAlign: 'right', backgroundColor: '#ffe6e6' }}>
+          <Card venue="sg" style={{ textAlign: 'right' }} className="background-color-light-pink">
             <CardTitle>Holy Matrimony</CardTitle>
             <div>{ DateFormat }</div>
             <div className="weddingTime">{ process.env.WEDDING_TIME.ceremony }</div>
@@ -74,7 +74,7 @@ export default function DetailsSection ({ children }) {
             <WeddingAddress>{ process.env.CEREMONY_ADDR.l2 }</WeddingAddress>
             <WeddingAddress>{ process.env.CEREMONY_ADDR.l3 }</WeddingAddress>
           </Card>
-          <Card venue="jkt" style={{ backgroundColor: '#ffe6e6' }}>
+          <Card venue="jkt" className="background-color-light-pink">
             <CardTitle>Wedding Reception</CardTitle>
             <div>{ DateFormat }</div>
             <div className="weddingTime">{ process.env.WEDDING_TIME.cocktail }</div>
@@ -96,7 +96,7 @@ export default function DetailsSection ({ children }) {
         <br />
         <div className="rsvpButtonContainer">
           <Link href="/rsvp">
-            <Button type="button" onClick="" className="button-gold color-light-pink">
+            <Button type="button" onClick="" className="button-gold color-pink">
               RSVP
             </Button>
           </Link>

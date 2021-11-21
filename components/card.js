@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-//#ffe6e6
+
 const Card = styled.div`
   background: ${props => props.backgroundColor};
   border-radius: 4px;

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 const Title = styled.h1`
   color:  ${props => props.color};
   font-family: great_vibes, adlery_swash;
-  font-size: 5em;
-  font-weight: lighter;
+  font-size: 5.5em;
+  font-weight: 550;
   text-align: center;
   margin-top: 3.3em;
 
