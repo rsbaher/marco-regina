@@ -55,35 +55,37 @@ const SideImg = styled.img`
 `
 
 export default function OurStory({ children }) {
-    return (
-        <>
-          <DivContainer2>
-            <SideImgDiv style={{width: '95%'}}>
-              <SideImg src="/img/engagement/FadedLaugh.JPG" />
-              <FadeContainer></FadeContainer>
-            </SideImgDiv>
-            <section style={{width: '95%'}}>
-              
-              <Subtitle >Our Engagement</Subtitle>
-              
-              <Story>
-              <img src="/img/heart.svg" style={{ width: '1.5em'}} />
-              <br/>
-              <br/>
-                We&apos;re sorry we couldn&apos;t celebrate our engagement all together (blame COVID). Since there were many restrictions 
-                at the time we had to keep the party small, but we are very excited to share this special day with you all. 
-                If you&apos;d like to see some pictures, click the button below. 
-                <br />
-                <br />
-                <img src="/img/heart.svg" style={{ width: '1.5em'}} />
-                <br />
-                <br />
-                <Link href="/gallery">
-                <Button type="button" className="button-gold color-light-gold">Gallery</Button>
-                </Link>
-              </Story>
-            </section>
-          </DivContainer2>
-        </>
-    )
+  return (
+    <>
+      <DivContainer2>
+        <SideImgDiv style={{ width: '95%' }}>
+          <SideImg src="/img/engagement/FadedLaugh.JPG" />
+          <FadeContainer></FadeContainer>
+        </SideImgDiv>
+        <section style={{ width: '95%' }}>
+
+          <Subtitle >Our Engagement</Subtitle>
+
+          <Story>
+            <img src="/img/heart.svg" style={{ width: '1.5em' }} />
+            <br />
+            <br />
+            Between the undulating foothills and the soaring peaks of beautiful wildrose country,
+            we came together to pledge and celebrate our love.
+            Regretfully, we were unable to congregate in large numbers and celebrate our engagement
+            all together due to the seemingly never ending pandemic.
+            Blissfully however, we are ecstatic and overjoyed to share our big special day with you.
+            <br />
+            <br />
+            <img src="/img/heart.svg" style={{ width: '1.5em' }} />
+            <br />
+            <br />
+            <Link href="/gallery">
+              <Button type="button" className="button-gold color-light-gold">Gallery</Button>
+            </Link>
+          </Story>
+        </section>
+      </DivContainer2>
+    </>
+  )
 }
