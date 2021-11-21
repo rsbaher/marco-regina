@@ -1,4 +1,4 @@
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import OurStory from '../components/OurStory'
 import DetailsSection from '../components/DetailsSection'
 
