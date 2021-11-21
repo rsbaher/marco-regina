@@ -8,7 +8,6 @@ import TextBox from '../components/textbox'
 import RadioButton from '../components/radiobutton'
 import Checkbox from '../components/checkbox'
 import { getFormData, uuidv4 } from '../utilities/helper'
-import styles from '../components/homepage.style'
 import 'react-toastify/dist/ReactToastify.css'
 import RSVPForm from '../components/RSVPForm'
 import Layout from '../components/Layout'
@@ -65,10 +64,10 @@ function getEvents(locations) {
   return comingEvents
 }
 
-export default () => (
+export default function RSVP () {
+  return (
   <Layout>
-
-    <section style={styles.content1}>
+    <section className="content1">
     <Subtitle style={{ width: '100%'}}>Event Details</Subtitle>
       <DivContainer2>
         
@@ -79,7 +78,7 @@ export default () => (
         <Card venue="sg" style={{ textAlign: 'center', backgroundColor: '#ffe6e6' }}>
           <CardTitle>Hotels</CardTitle>
           <p>List Hotel Options</p>
-          <p>Please select if you'd like to join into the room block, if so please select the hotel you'd prefer. Find hotel that has shuttle</p>
+          <p>Please select if you would like to join into the room block, if so please select the hotel you prefer. Find hotel that has shuttle</p>
         </Card>
         <Card venue="sg" style={{ textAlign: 'center', backgroundColor: '#ffe6e6' }}>
           <CardTitle>Meal Options</CardTitle>
@@ -87,7 +86,7 @@ export default () => (
         </Card>
       </DivContainer2>
     </section>
-    <section style={styles.content2}>
+    <section className="content2">
       <Floral />
 
       <Subtitle>R.S.V.P.</Subtitle>
@@ -95,4 +94,4 @@ export default () => (
 
     </section>
   </Layout>
-)
+)}

@@ -36,7 +36,7 @@ export default function Layout({ children }) {
                 <section className="background" />
                 <div className="container">
                     <section className="content0">
-                        <Title className="color-white">Marco & <br/> Regina</Title>
+                        <Title className="color-white">Marco & Regina</Title>
                     </section>
 
                     {children}

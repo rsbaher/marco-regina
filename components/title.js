@@ -6,11 +6,11 @@ const Title = styled.h1`
   font-size: 5em;
   font-weight: lighter;
   text-align: center;
-  margin-top: 2em;
+  margin-top: 3.3em;
 
   @media (max-width: 414px) {
     font-size: 4em;
-    margin-top: 1.5em;
+    margin-top: 2.5em;
   }
 
   @media (max-width: 375px) {
