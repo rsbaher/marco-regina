@@ -39,7 +39,7 @@ const SideImgDiv = styled.div`
   margin: auto;
 `
 const FadeContainer = styled.div`
-  width: 80%;
+  width: 95%;
 	position: absolute;
 	bottom: 0px;
 	top: 0px;
@@ -49,7 +49,7 @@ const FadeContainer = styled.div`
 `
 
 const SideImg = styled.img`
-  width: 80%;
+  width: 95%;
   margin-left: 10%;
   margin-top: 10%;
 `
@@ -58,11 +58,11 @@ export default function OurStory({ children }) {
     return (
         <>
           <DivContainer2>
-            <SideImgDiv>
+            <SideImgDiv style={{width: '95%'}}>
               <SideImg src="/img/engagement/FadedLaugh.JPG" />
               <FadeContainer></FadeContainer>
             </SideImgDiv>
-            <section style={styles.sideContent}>
+            <section style={{width: '95%'}}>
               
               <Subtitle >Our Engagement</Subtitle>
               
