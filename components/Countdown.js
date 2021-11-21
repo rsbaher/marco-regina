@@ -1,4 +1,3 @@
-import styles from './homepage.style'
 import styled from 'styled-components'
 
 const CountdownDiv = styled.div`

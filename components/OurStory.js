@@ -1,9 +1,7 @@
-import styles from './homepage.style'
 import styled from 'styled-components'
 import Subtitle from '../components/subtitle'
 import Button from '../components/button'
 import Link from 'next/link'
-//import "../public/style.css";
 
 const Story = styled.p`
   color: #6f6e77;
@@ -80,9 +78,11 @@ export default function OurStory({ children }) {
             <img src="/img/heart.svg" style={{ width: '1.5em' }} />
             <br />
             <br />
+            <div className="rsvpButtonContainer">
             <Link href="/gallery">
               <Button type="button" className="button-gold color-light-gold">Gallery</Button>
             </Link>
+            </div>
           </Story>
         </section>
       </DivContainer2>
