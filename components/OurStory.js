@@ -70,9 +70,9 @@ export default function OurStory({ children }) {
               <img src="/img/heart.svg" style={{ width: '1.5em'}} />
               <br/>
               <br/>
-                We're sorry we couldn't celebrate our engagement all together (blame COVID). Since there were many restrictions 
+                We&apos;re sorry we couldn&apos;t celebrate our engagement all together (blame COVID). Since there were many restrictions 
                 at the time we had to keep the party small, but we are very excited to share this special day with you all. 
-                If you'd like to see some pictures, click the button below. 
+                If you&apos;d like to see some pictures, click the button below. 
                 <br />
                 <br />
                 <img src="/img/heart.svg" style={{ width: '1.5em'}} />
