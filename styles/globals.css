@@ -40,6 +40,80 @@ body {
   font-family: tajawal;
 }
 
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100% repeat(3, auto);
+  grid-template-areas: "content0"
+        "content1"
+        "content2"
+        "content3";
+}
+
+.background {
+  background-image: url("/img/engagement/CeremonyCenter.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content0 {
+  grid-area: 'content0'
+}
+
+.content1 {
+  background-color: #fff3e6;
+  grid-area: content1;
+  padding-top: 2em;
+  padding-bottom: 10em;
+}
+.content2 {
+  grid-area: content2;
+  background-color: #FFCABA;
+  padding-bottom: 4em;
+}
+.content3 {
+  grid-area: content3;
+  background-color: rgba(255,255,255,0.8);
+  text-align: center;
+}
+.sideContent {
+  width: 100%;
+  margin-right: 5%;
+}
+.sideImg {
+  width: 50%;
+  float: left;
+}
+.image {
+  width: 100%;
+}
+.weddingTime {
+  font-family: tajawal;
+  font-weight: bold;
+}
+
+.rsvpButtonContainer {
+  text-align: center;
+}
+
+.content2Button {
+  background-color: #cba135;
+  color: #FFCABA;
+  font-size: 1em;
+}
+
+.content1Button {
+  background-color: #cba135;
+  color: #fff3e6;
+  font-size: 1em;
+}
+
 .toast-background {
   background-color: #3da241;
 }
@@ -76,15 +150,27 @@ body {
 }
 
 .color-light-pink {
-  color: #ffdcd3;
+  color: #ffdfd5;
 }
 
 .color-light-gold {
   color: #fff3e6;
 }
 
+.color-pink {
+  color: #FFCABA;
+}
+
+.background-color-pink {
+  background-color: #FFCABA;
+}
+
+.background-color-light-pink {
+  background-color: #ffdfd5;
+}
+
 .color-white {
-  color: #ffede9;
+  color: #ffe9e3;
 }
 
 .color-gold {

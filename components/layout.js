@@ -1,5 +1,4 @@
 import Title from './title'
-import styles from './homepage.style'
 import styled from 'styled-components'
 
 const GithubLink = styled.p`
@@ -34,15 +33,15 @@ export default function Layout({ children }) {
     return (
         <>
             <div style={{ height: '100%' }}>
-                <section style={styles.background} />
-                <div style={styles.container}>
-                    <section style={styles.content0}>
-                        <Title className="color-white">Marco & <br/> Regina</Title>
+                <section className="background" />
+                <div className="container">
+                    <section className="content0">
+                        <Title className="color-white">Marco & Regina</Title>
                     </section>
 
                     {children}
 
-                    <footer style={styles.content3}>
+                    <footer className="content3">
                         <div style={{ fontSize: '1.5em', marginTop: '1em' }}>
                             { process.env.HASHTAG }
                         </div>
