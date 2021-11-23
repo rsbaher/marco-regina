@@ -4,7 +4,7 @@ import auth from '../../utilities/auth'
 export async function getServerSideProps({ query }) {
     const sheets = google.sheets({ version: 'v4', auth });
     const { id } = query;
-    const range = `Sheet1!A${id}:C${id}`;
+    const range = `reginabaher@gmail.com!A${id}:C${id}`;
 
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: process.env.GOOGLE_SHEET,
