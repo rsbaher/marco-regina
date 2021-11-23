@@ -52,7 +52,7 @@ body {
 }
 
 .background {
-  background-image: url("/img/engagement/CeremonyCenter.jpeg");
+  background-image: url("/img/Cover-01.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -93,12 +93,12 @@ body {
 .image {
   width: 100%;
 }
-.weddingTime {
+.font-taj-bold {
   font-family: tajawal;
   font-weight: bold;
 }
 
-.rsvpButtonContainer {
+.text-align-center {
   text-align: center;
 }
 
@@ -175,4 +175,12 @@ body {
 
 .color-gold {
   color: #cba135;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline:hover{
+  text-decoration: underline;
 }

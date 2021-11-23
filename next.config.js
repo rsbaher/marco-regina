@@ -77,9 +77,13 @@ const HOTELS = [
 },
 ]
 
+const GOOGLE_SHEET="1pPhVclLqJcnzNQMaPbyJAFoj6_ARDZmSrOW0v5B6FzE"
+const GOOGLE_CRED=require("./credentials.json")
 module.exports = {
   reactStrictMode: true,
   env: {
+    GOOGLE_APPLICATION_CREDENTIALS: GOOGLE_CRED,
+    GOOGLE_SHEET: GOOGLE_SHEET,
     WEB_TITLE: WEB_TITLE,
     HASHTAG: HASHTAG,
     CEREMONY_VENUE: CEREMONY_VENUE,

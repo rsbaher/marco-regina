@@ -78,7 +78,7 @@ export default function OurStory({ children }) {
             <img src="/img/heart.svg" style={{ width: '1.5em' }} />
             <br />
             <br />
-            <div className="rsvpButtonContainer">
+            <div className="text-align-center">
             <Link href="/gallery">
               <Button type="button" className="button-gold color-light-gold">Gallery</Button>
             </Link>

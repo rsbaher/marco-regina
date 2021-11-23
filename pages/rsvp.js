@@ -52,35 +52,23 @@ padding: 1em;
 }
 `
 
-function getEvents(locations) {
-  if (!locations) return ''
-
-  let comingEvents = []
-  locations.forEach((location, index) => {
-    if (events[location]) {
-      comingEvents.push(events[location])
-    }
-  })
-  return comingEvents
-}
-
 export default function RSVP () {
   return (
-  <Layout>
+    <>
     <section className="content1">
     <Subtitle style={{ width: '100%'}}>Event Details</Subtitle>
       <DivContainer2>
         
-        <Card venue="sg" style={{ textAlign: 'center'}} className="background-color-light-pink">
+        <Card style={{ textAlign: 'center'}} className="background-color-light-pink">
           <CardTitle>Itenerary</CardTitle>
           <p>Itenerary with google maps embeded  and average travel times</p>
         </Card>
-        <Card venue="sg" style={{ textAlign: 'center', }} className="background-color-light-pink">
+        <Card style={{ textAlign: 'center', }} className="background-color-light-pink">
           <CardTitle>Hotels</CardTitle>
           <p>List Hotel Options</p>
           <p>Please select if you would like to join into the room block, if so please select the hotel you prefer. Find hotel that has shuttle</p>
         </Card>
-        <Card venue="sg" style={{ textAlign: 'center', }} className="background-color-light-pink">
+        <Card style={{ textAlign: 'center', }} className="background-color-light-pink">
           <CardTitle>Meal Options</CardTitle>
           <p>Describe options</p>
         </Card>
@@ -91,7 +79,6 @@ export default function RSVP () {
 
       <Subtitle>R.S.V.P.</Subtitle>
       <RSVPForm />
-
     </section>
-  </Layout>
+    </>
 )}
