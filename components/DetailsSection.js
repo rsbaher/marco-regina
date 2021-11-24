@@ -23,7 +23,7 @@ export default function DetailsSection ({ children }) {
             <CardTitle>Holy Matrimony</CardTitle>
             <div>{ wedDate.toDateString() }</div>
             <div className="font-taj-bold">{ process.env.WEDDING_TIME.ceremony }</div>
-            <a className="title-gold"
+            <a className="title-gold pointer-on-hover"
               href={ process.env.CEREMONY_ADDR.url }
               target="_blank"
               rel="noreferrer"
@@ -43,7 +43,7 @@ export default function DetailsSection ({ children }) {
             <CardTitle>Wedding Reception</CardTitle>
             <div>{ wedDate.toDateString() }</div>
             <div className="font-taj-bold">{ process.env.WEDDING_TIME.cocktail }</div>
-            <a className="title-gold"
+            <a className="title-gold pointer-on-hover" 
               href={ process.env.RECEPTION_ADDR.url }
               target="_blank"
               rel="noreferrer"

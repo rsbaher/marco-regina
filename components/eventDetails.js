@@ -27,7 +27,7 @@ export default function EventDetails ({ children }) {
         </div>
         <br />
         <div className="text-align-center">
-          <Link href="/rsvp" passHref>
+          <Link href="/rsvp" className="pointer-on-hover" passHref>
             <Button type="button" onClick="" className="button-gold color-light-gold">
               RSVP
             </Button>

@@ -51,7 +51,7 @@ export default function Gallery() {
             <CardTitle style={{ textAlign: 'center', }}>Adresses</CardTitle>
             <br />
             <div className="title-container-two-columns"><ChildDiv className="font-taj-bold">The Ceremony</ChildDiv>
-              <ChildDiv><a className="title-gold" rel="noreferrer"
+              <ChildDiv><a className="title-gold pointer-on-hover" rel="noreferrer"
                 href={process.env.CEREMONY_ADDR.url}
                 target="_blank">Directions</a></ChildDiv>
             </div>
@@ -63,7 +63,7 @@ export default function Gallery() {
 
             <br />
             <div className="title-container-two-columns"><ChildDiv className="font-taj-bold">The Reception</ChildDiv>
-              <ChildDiv><a className="title-gold" rel="noreferrer"
+              <ChildDiv><a className="title-gold pointer-on-hover" rel="noreferrer"
                 href={process.env.RECEPTION_ADDR.url}
                 target="_blank">Directions</a></ChildDiv>
             </div>
@@ -86,7 +86,7 @@ export default function Gallery() {
 
         </div>
         <br />
-        <Link href="/" passHref><CardTitle className="underline" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
+        <Link href="/" passHref><CardTitle className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
         < br />
       </section>
 
@@ -102,7 +102,7 @@ export default function Gallery() {
             <div>{hotel1.addr.l2}</div>
             <div>{hotel1.addr.l3}</div>
 
-            <div><a className="title-gold" rel="noreferrer" href={hotel1.addr.url}
+            <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel1.addr.url}
               target="_blank">Directions</a></div>
           </Card>
 
@@ -113,7 +113,7 @@ export default function Gallery() {
             <div>{hotel2.addr.l2}</div>
             <div>{hotel2.addr.l3}</div>
 
-            <div><a className="title-gold" rel="noreferrer" href={hotel2.addr.url}
+            <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel2.addr.url}
               target="_blank">Directions</a></div>
           </Card>
 
@@ -124,7 +124,7 @@ export default function Gallery() {
             <div>{hotel3.addr.l2}</div>
             <div>{hotel3.addr.l3}</div>
 
-            <div><a className="title-gold" rel="noreferrer" href={hotel3.addr.url}
+            <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel3.addr.url}
               target="_blank">Directions</a></div>
           </Card>
 
@@ -135,12 +135,12 @@ export default function Gallery() {
             <div>{hotel4.addr.l2}</div>
             <div>{hotel4.addr.l3}</div>
 
-            <div><a className="title-gold" rel="noreferrer" href={hotel4.addr.url}
+            <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel4.addr.url}
               target="_blank">Directions</a></div>
           </Card>
         </div>
         <br />
-        <Link href="/" passHref><CardTitle className="underline" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
+        <Link href="/"  passHref><CardTitle className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
         <br />
       </section>
     </>
