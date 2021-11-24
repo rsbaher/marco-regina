@@ -10,6 +10,7 @@
   "dependencies": {
     "formik": "^2.2.9",
     "googleapis": "^91.0.0",
+    "http2": "^3.3.7",
     "next": "12.0.4",
     "react": "17.0.2",
     "react-countdown": "^2.3.2",

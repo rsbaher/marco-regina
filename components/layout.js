@@ -43,7 +43,7 @@ export default function Layout({ children }) {
 
                     <footer className="content3">
                         <div style={{ fontSize: '1.5em', marginTop: '1em' }}>
-                            { process.env.HASHTAG }
+                            { process.env.NEXT_PUBLIC_HASHTAG }
                         </div>
 
                         <div style={{ color: 'gray', margin: '.5em' }}>

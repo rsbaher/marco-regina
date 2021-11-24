@@ -1,9 +1,11 @@
 import { google } from 'googleapis'
 
+const googleService = JSON.parse(process.env.NEXT_PUBLIC_GOOGLE_CRED)
+
 const auth = new google.auth.JWT(
-    process.env.NEXT_PUBLIC_CLIENT_EMAIL,
+    googleService.client_email,
     null,
-    process.env.NEXT_PUBLIC_PRIVATE_KEY,
+    googleService.private_key,
     ['https://www.googleapis.com/auth/spreadsheets']);
 //authenticate request
 auth.authorize(function (err, tokens) {
