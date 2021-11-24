@@ -8,9 +8,10 @@ const Title = styled.h1`
   text-align: center;
   margin-top: 3.3em;
 
-  @media (max-width: 414px) {
-    font-size: 4em;
-    margin-top: 2.5em;
+  @media (max-width: 500px) {
+    font-size: 4.5em;
+    margin-top: 0.3em;
+    font-weight: normal;
   }
 
   @media (max-width: 375px) {

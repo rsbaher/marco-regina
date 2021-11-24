@@ -81,7 +81,6 @@ module.exports = {
   reactStrictMode: true,
   env: {
     WEB_TITLE: WEB_TITLE,
-    HASHTAG: HASHTAG,
     CEREMONY_VENUE: CEREMONY_VENUE,
     RECEPTION_VENUE: RECEPTION_VENUE,
     WEDDING_DATE: WEDDING_DATE,
@@ -89,5 +88,14 @@ module.exports = {
     CEREMONY_ADDR: CEREMONY_ADDR,
     RECEPTION_ADDR: RECEPTION_ADDR,
     HOTELS: HOTELS,
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+      config.resolve.fallback.child_process = false;
+      config.resolve.fallback.net = false;
+      config.resolve.fallback.tls = false;
+    }
+    return config;
   },
 }

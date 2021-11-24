@@ -1,15 +1,7 @@
 import Title from './title'
 import styled from 'styled-components'
+import Link from 'next/link'
 
-const GithubLink = styled.p`
-  text-align: center;
-  margin-top: 1em;
-`
-const DivContainer2 = styled.div`
-  width: 100%;
-  display: flex;
-  align-items:center;
-`
 const LeftFloat = styled.span`
   width: 100%;
   text-align: right;
@@ -36,14 +28,14 @@ export default function Layout({ children }) {
                 <section className="background" />
                 <div className="container">
                     <section className="content0">
-                        <Title className="color-white">Marco & Regina</Title>
+                    <Link href="/" passHref><Title className="color-white pointer-on-hover">Marco & Regina</Title></Link>
                     </section>
 
                     {children}
 
                     <footer className="content3">
                         <div style={{ fontSize: '1.5em', marginTop: '1em' }}>
-                            { process.env.HASHTAG }
+                            { process.env.NEXT_PUBLIC_HASHTAG }
                         </div>
 
                         <div style={{ color: 'gray', margin: '.5em' }}>

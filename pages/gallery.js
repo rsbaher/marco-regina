@@ -1,18 +1,21 @@
-import Layout from '../components/layout'
-import OurStory from '../components/OurStory'
-import DetailsSection from '../components/DetailsSection'
-
+import Subtitle from '../components/subtitle'
+import Floral from '../components/GalleryFloral'
 
 export default function Gallery() {
   
   return (
-    <Layout>
+    <>
       <section className="content1">
-        Engagement Photos
+        <Subtitle>Engagement Photos</Subtitle>
+        <br/>
+        <br/>
       </section>
       <section className="content2">
-        Wedding Photos
+      <Floral />
+      <Subtitle>Wedding Photos</Subtitle>
+      <br/>
+      <br/>
       </section>
-      </Layout>
+      </>
   )
 }

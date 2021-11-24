@@ -19,18 +19,6 @@ const Story = styled.p`
   }
 `
 
-const DivContainer = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-`
-
-const DivContainer2 = styled.div`
-  width: 100%;
-  display: flex;
-  align-items:center;
-`
 const SideImgDiv = styled.div`
   width: 100%;
   position: relative;
@@ -41,51 +29,46 @@ const FadeContainer = styled.div`
 	position: absolute;
 	bottom: 0px;
 	top: 0px;
-  margin-left: 10%;
-  margin-top: 10%;
 	box-shadow: inset 0px 0px 10px 20px #fff3e6;
 `
 
 const SideImg = styled.img`
   width: 95%;
-  margin-left: 10%;
-  margin-top: 10%;
 `
 
 export default function OurStory({ children }) {
   return (
     <>
-      <DivContainer2>
-        <SideImgDiv style={{ width: '95%' }}>
+    <Subtitle style={{marginBottom: '0px'}}>Our Engagement</Subtitle>
+      <div className="container-img-two-columns" style={{maxWidth: '1300px'}}>
+        <SideImgDiv className="img-column">
           <SideImg src="/img/engagement/FadedLaugh.JPG" />
           <FadeContainer></FadeContainer>
         </SideImgDiv>
-        <section style={{ width: '95%' }}>
-
-          <Subtitle >Our Engagement</Subtitle>
-
+        <section className="text-column">
           <Story>
+          <br />
             <img src="/img/heart.svg" style={{ width: '1.5em' }} />
             <br />
-            <br />
+
             Between the undulating foothills and the soaring peaks of beautiful wildrose country,
             we came together to pledge and celebrate our love.
             Regretfully, we were unable to congregate in large numbers and celebrate our engagement
             all together due to the seemingly never ending pandemic.
             Blissfully however, we are ecstatic and overjoyed to share our big special day with you.
             <br />
+
+            <img src="/img/heart.svg" style={{ width: '1.5em',paddingTop: '0.5em' }} />
             <br />
-            <img src="/img/heart.svg" style={{ width: '1.5em' }} />
             <br />
-            <br />
-            <div className="rsvpButtonContainer">
-            <Link href="/gallery">
+            <div className="text-align-center">
+            <Link href="/gallery" className="pointer-on-hover" passHref>
               <Button type="button" className="button-gold color-light-gold">Gallery</Button>
             </Link>
             </div>
           </Story>
         </section>
-      </DivContainer2>
+      </div>
     </>
   )
 }

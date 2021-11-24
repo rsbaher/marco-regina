@@ -51,8 +51,43 @@ body {
         "content3";
 }
 
+.container-two-columns{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  margin: auto;
+  max-width: 700px;
+  padding: 1em;
+}
+
+.title-container-two-columns{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  margin: auto;
+  max-width: 700px;
+}
+
+.container-three-columns{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  margin: auto;
+  max-width: 900px;
+  padding: 1em;
+}
+
+.card-icon {
+  position: absolute;
+  width: 7em;
+  z-index: -1;
+}
+
 .background {
-  background-image: url("/img/engagement/CeremonyCenter.jpeg");
+  background-image: url("/img/Cover-01.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -93,12 +128,12 @@ body {
 .image {
   width: 100%;
 }
-.weddingTime {
+.font-taj-bold {
   font-family: tajawal;
   font-weight: bold;
 }
 
-.rsvpButtonContainer {
+.text-align-center {
   text-align: center;
 }
 
@@ -175,4 +210,118 @@ body {
 
 .color-gold {
   color: #cba135;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline:hover{
+  text-decoration: underline;
+}
+
+.title-gold {
+  color: #cba135;
+  font-weight: bold;
+  text-decoration-color: #cba135;
+  z-index: 2;
+}
+
+@media (max-width: 320px) {
+  .card-icon {
+    position: absolute;
+    width: 5em;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 885px){
+  .container-three-columns{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin: auto;
+    max-width: 500px;
+    padding: 1em;
+  }
+}
+.pointer-on-hover:hover{
+  cursor: pointer;
+}
+
+.container-img-two-columns{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  margin: auto;
+  max-width: 1300px;
+  padding: 1em;
+}
+
+.img-column{
+  margin-right: -20px;
+}
+
+@media (max-width: 900px){
+  .container-img-two-columns{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    margin: auto;
+    max-width: 800px;
+    padding: 1em;
+  }
+  .img-column{
+    margin-right: -22px;
+    margin-top: 14px;
+  }
+}
+
+@media (max-width: 600px){
+  .container-two-columns{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    margin: auto;
+    max-width: 400px;
+    padding: 1em;
+  }
+
+  .container-three-columns{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin: auto;
+    max-width: 300px;
+    padding: 1em;
+  }
+
+  .card-icon {
+    position: absolute;
+    width: 7em;
+    z-index: -1;
+  }
+
+  .title-container-two-columns{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    margin: auto;
+    max-width: 700px;
+  }
+
+  .img-column{
+    margin-right: -14px;
+    margin-top: 14px;
+  }
+
+  .text-column{
+    margin-top: -100px
+  }
 }
