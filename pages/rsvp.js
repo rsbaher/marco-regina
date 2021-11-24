@@ -58,7 +58,6 @@ export default function RSVP () {
     <section className="content1">
     <Subtitle style={{ width: '100%'}}>Event Details</Subtitle>
       <DivContainer2>
-        
         <Card style={{ textAlign: 'center'}} className="background-color-light-pink">
           <CardTitle>Itenerary</CardTitle>
           <p>Itenerary with google maps embeded  and average travel times</p>

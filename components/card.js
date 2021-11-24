@@ -11,7 +11,7 @@ const Card = styled.div`
   overflow: hidden;
   z-index: 0;
 
-  @media (max-width: 414px) {
+  @media (max-width: 500px) {
     font-size: 1.2em;
   }
 

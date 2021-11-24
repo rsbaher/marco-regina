@@ -15,6 +15,6 @@ auth.authorize(function (err, tokens) {
     } else {
         console.log("Successfully connected!");
     }
-});
+}); 
 
 export default auth;

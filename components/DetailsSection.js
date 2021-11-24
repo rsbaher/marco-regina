@@ -7,45 +7,6 @@ import Button from './button'
 import CardTitle from './CardTitle'
 import React from 'react';
 
-const WeddingDetails = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 1em;
-  margin: auto;
-  max-width: 700px;
-  padding: 1em;
-
-  @media (max-width: 414px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-`
-
-const CardIcon = styled.img`
-  position: absolute;
-  width: 7em;
-  z-index: -1;
-
-  @media (max-width: 375px) {
-    width: 6em;
-  }
-
-  @media (max-width: 320px) {
-    width: 5em;
-  }
-`
-
-const WeddingVenue = styled.a`
-  color: #cba135;
-  font-weight: bold;
-  text-decoration-color: #cba135;
-  z-index: 2;
-`
-
-const WeddingAddress = styled.div`
-  color: #cba135;
-`
 export default function DetailsSection ({ children }) {
   const wedDate = new Date(process.env.WEDDING_DATE);
 
@@ -57,44 +18,47 @@ export default function DetailsSection ({ children }) {
         
         <CountdownSection />
         <br />
-        <WeddingDetails>
+        <div className="container-two-columns">
           <Card style={{ textAlign: 'right' }} className="background-color-light-pink">
             <CardTitle>Holy Matrimony</CardTitle>
             <div>{ wedDate.toDateString() }</div>
             <div className="font-taj-bold">{ process.env.WEDDING_TIME.ceremony }</div>
-            <WeddingVenue
+            <a className="title-gold"
               href={ process.env.CEREMONY_ADDR.url }
               target="_blank"
+              rel="noreferrer"
             >
               { process.env.CEREMONY_VENUE }
-            </WeddingVenue>
-            <CardIcon
+            </a>
+            <img className="card-icon"
               src="/img/arch-tan.svg"
               style={{ left: '0.3em' }}
             />
-            <WeddingAddress>{ process.env.CEREMONY_ADDR.l1 }</WeddingAddress>
-            <WeddingAddress>{ process.env.CEREMONY_ADDR.l2 }</WeddingAddress>
-            <WeddingAddress>{ process.env.CEREMONY_ADDR.l3 }</WeddingAddress>
+            <div className="color-gold">{ process.env.CEREMONY_ADDR.l1 }</div>
+            <div className="color-gold">{ process.env.CEREMONY_ADDR.l2 }</div>
+            <div className="color-gold">{ process.env.CEREMONY_ADDR.l3 }</div>
           </Card>
+          
           <Card className="background-color-light-pink">
             <CardTitle>Wedding Reception</CardTitle>
             <div>{ wedDate.toDateString() }</div>
             <div className="font-taj-bold">{ process.env.WEDDING_TIME.cocktail }</div>
-            <WeddingVenue
+            <a className="title-gold"
               href={ process.env.RECEPTION_ADDR.url }
               target="_blank"
+              rel="noreferrer"
             >
               { process.env.RECEPTION_VENUE }
-            </WeddingVenue>
-            <CardIcon
+            </a>
+            <img className="card-icon"
               src="/img/rings-colour.svg"
               style={{ right: '-0.3em' }}
             />
-            <WeddingAddress>{ process.env.RECEPTION_ADDR.l1 }</WeddingAddress>
-            <WeddingAddress>{ process.env.RECEPTION_ADDR.l2 }</WeddingAddress>
-            <WeddingAddress>{ process.env.RECEPTION_ADDR.l3 }</WeddingAddress>
+            <div className="color-gold">{ process.env.RECEPTION_ADDR.l1 }</div>
+            <div className="color-gold">{ process.env.RECEPTION_ADDR.l2 }</div>
+            <div className="color-gold">{ process.env.RECEPTION_ADDR.l3 }</div>
           </Card>
-        </WeddingDetails>
+        </div>
     </>
   )
 }

@@ -7,38 +7,6 @@ import Floral from '../components/Floral'
 import CardTitle from '../components/CardTitle'
 import React from 'react';
 
-const WeddingDetails = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 1em;
-  margin: auto;
-  max-width: 1100px;
-  padding: 1em;
-
-  @media (max-width: 414px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-`
-const GridColumn2 = styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr;
-
-@media (max-width: 414px) {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-}`
-
-const WeddingVenue = styled.a`
-  color: #cba135;
-  font-weight: bold;
-  text-decoration-color: #cba135;
-  z-index: 2;
-  text-align: right;
-`
-
 const ChildDiv = styled.div`
 position: relative;
 overflow: hidden;
@@ -60,9 +28,10 @@ export default function Gallery() {
   return (
     <>
       <section className="content1">
-        <Subtitle>The Details</Subtitle>
-        <br />
-        <WeddingDetails>
+        <Subtitle style={{marginBottom: '0.5em'}}>The Details</Subtitle>
+        
+        <div className="container-three-columns">
+
           <Card className="background-color-light-pink">
             <CardTitle style={{ textAlign: 'center', }}>Itenerary</CardTitle>
             <br />
@@ -81,11 +50,11 @@ export default function Gallery() {
           <Card className="background-color-light-pink">
             <CardTitle style={{ textAlign: 'center', }}>Adresses</CardTitle>
             <br />
-            <GridColumn2><ChildDiv className="font-taj-bold">The Ceremony</ChildDiv>
-              <ChildDiv><WeddingVenue
+            <div className="title-container-two-columns"><ChildDiv className="font-taj-bold">The Ceremony</ChildDiv>
+              <ChildDiv><a className="title-gold" rel="noreferrer"
                 href={process.env.CEREMONY_ADDR.url}
-                target="_blank">Directions</WeddingVenue></ChildDiv>
-            </GridColumn2>
+                target="_blank">Directions</a></ChildDiv>
+            </div>
 
             <div className="color-gold bold">{process.env.CEREMONY_VENUE}</div>
             <div className="color-gold">{process.env.CEREMONY_ADDR.l1}</div>
@@ -93,11 +62,11 @@ export default function Gallery() {
             <div className="color-gold">{process.env.CEREMONY_ADDR.l3}</div>
 
             <br />
-            <GridColumn2><ChildDiv className="font-taj-bold">The Reception</ChildDiv>
-              <ChildDiv><WeddingVenue
+            <div className="title-container-two-columns"><ChildDiv className="font-taj-bold">The Reception</ChildDiv>
+              <ChildDiv><a className="title-gold" rel="noreferrer"
                 href={process.env.RECEPTION_ADDR.url}
-                target="_blank">Directions</WeddingVenue></ChildDiv>
-            </GridColumn2>
+                target="_blank">Directions</a></ChildDiv>
+            </div>
 
             <div className="color-gold bold">  {process.env.RECEPTION_VENUE}</div>
             <div className="color-gold">{process.env.RECEPTION_ADDR.l1}</div>
@@ -114,20 +83,18 @@ export default function Gallery() {
             <div className="font-taj-bold">Chicken Type 2</div>
             <div>Detailed Description of the chicken</div>
           </Card>
-        </WeddingDetails>
+
+        </div>
         <br />
-        <Link href="/"><CardTitle className="underline" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
+        <Link href="/" passHref><CardTitle className="underline" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
         < br />
       </section>
 
       <section className="content2">
         <Floral />
-        <br />
-        <br />
-        <br />
-        <Subtitle>Hotel Options</Subtitle>
-        <br />
-        <GridColumn2 style={{ maxWidth: '1100px', gridGap: '1em', margin: 'auto' }}>
+
+        <Subtitle style={{marginBottom: '0.5em', paddingTop: '1em'}}>Hotel Options</Subtitle>
+        <div className="container-two-columns" style={{ maxWidth: '900px', }}>
           <Card className="background-color-light-pink">
             <CardTitle style={{ textAlign: 'center', }}>{hotel1.name}</CardTitle>
 
@@ -135,8 +102,8 @@ export default function Gallery() {
             <div>{hotel1.addr.l2}</div>
             <div>{hotel1.addr.l3}</div>
 
-            <div><WeddingVenue href={hotel1.addr.url}
-              target="_blank">Directions</WeddingVenue></div>
+            <div><a className="title-gold" rel="noreferrer" href={hotel1.addr.url}
+              target="_blank">Directions</a></div>
           </Card>
 
           <Card className="background-color-light-pink">
@@ -146,8 +113,8 @@ export default function Gallery() {
             <div>{hotel2.addr.l2}</div>
             <div>{hotel2.addr.l3}</div>
 
-            <div><WeddingVenue href={hotel2.addr.url}
-              target="_blank">Directions</WeddingVenue></div>
+            <div><a className="title-gold" rel="noreferrer" href={hotel2.addr.url}
+              target="_blank">Directions</a></div>
           </Card>
 
           <Card className="background-color-light-pink">
@@ -157,8 +124,8 @@ export default function Gallery() {
             <div>{hotel3.addr.l2}</div>
             <div>{hotel3.addr.l3}</div>
 
-            <div><WeddingVenue href={hotel3.addr.url}
-              target="_blank">Directions</WeddingVenue></div>
+            <div><a className="title-gold" rel="noreferrer" href={hotel3.addr.url}
+              target="_blank">Directions</a></div>
           </Card>
 
           <Card className="background-color-light-pink">
@@ -168,12 +135,12 @@ export default function Gallery() {
             <div>{hotel4.addr.l2}</div>
             <div>{hotel4.addr.l3}</div>
 
-            <div><WeddingVenue href={hotel4.addr.url}
-              target="_blank">Directions</WeddingVenue></div>
+            <div><a className="title-gold" rel="noreferrer" href={hotel4.addr.url}
+              target="_blank">Directions</a></div>
           </Card>
-        </GridColumn2>
+        </div>
         <br />
-        <Link href="/"><CardTitle className="underline" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
+        <Link href="/" passHref><CardTitle className="underline" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
         <br />
       </section>
     </>

@@ -16,7 +16,7 @@ export default function Home() {
         <DetailsSection />
         <br />
         <div className="text-align-center">
-          <Link href="/details">
+          <Link href="/details" passHref>
             <Button type="button" onClick="" className="button-gold color-light-pink">
               Event Details
             </Button>
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
         <br />
         <div className="text-align-center">
-        <Link href="/rsvp">
+        <Link href="/rsvp" passHref>
             <Button type="button" onClick="" className="button-gold color-light-pink">
               RSVP
             </Button>
