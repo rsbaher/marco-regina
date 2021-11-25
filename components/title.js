@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Title = styled.h1`
   color:  ${props => props.color};
-  font-family: great_vibes, adlery_swash;
+  font-family: 'Great Vibes', cursive;
   font-size: 5.5em;
   font-weight: 550;
   text-align: center;

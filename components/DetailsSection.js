@@ -6,6 +6,9 @@ import Link from 'next/link'
 import Button from './button'
 import CardTitle from './CardTitle'
 import React from 'react';
+import Image from 'next/image'
+import RingsSvg from '../public/img/rings-colour.svg'
+import ArchSvg from '../public/img/arch-tan.svg'
 
 export default function DetailsSection ({ children }) {
   const wedDate = new Date(process.env.WEDDING_DATE);
@@ -30,10 +33,11 @@ export default function DetailsSection ({ children }) {
             >
               { process.env.CEREMONY_VENUE }
             </a>
-            <img className="card-icon"
-              src="/img/arch-tan.svg"
-              style={{ left: '0.3em' }}
-            />
+            <div className="card-icon left"><Image
+              src={ArchSvg}
+              width={125}
+              height={125}
+            /></div>
             <div className="color-gold">{ process.env.CEREMONY_ADDR.l1 }</div>
             <div className="color-gold">{ process.env.CEREMONY_ADDR.l2 }</div>
             <div className="color-gold">{ process.env.CEREMONY_ADDR.l3 }</div>
@@ -50,10 +54,11 @@ export default function DetailsSection ({ children }) {
             >
               { process.env.RECEPTION_VENUE }
             </a>
-            <img className="card-icon"
-              src="/img/rings-colour.svg"
-              style={{ right: '-0.3em' }}
-            />
+            <div className="card-icon right"><Image
+              src={RingsSvg}
+              width={125}
+              height={125}
+            /></div>
             <div className="color-gold">{ process.env.RECEPTION_ADDR.l1 }</div>
             <div className="color-gold">{ process.env.RECEPTION_ADDR.l2 }</div>
             <div className="color-gold">{ process.env.RECEPTION_ADDR.l3 }</div>
