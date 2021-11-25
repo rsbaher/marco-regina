@@ -2,10 +2,12 @@ import styled from 'styled-components'
 import Subtitle from '../components/subtitle'
 import Button from '../components/button'
 import Link from 'next/link'
-
+import Image from 'next/image'
+import HeartSvg from '../public/img/heart.svg'
+import SideImg from '../public/img/engagement/FadedLaugh.JPG'
 const Story = styled.p`
   color: #6f6e77;
-  font-family: tajawal, sans-serif;
+  font-family: 'El Messiri', sans-serif;
   font-size: 1.2em;
   line-height: 1.5em;
   margin: auto;
@@ -30,25 +32,22 @@ const FadeContainer = styled.div`
 	bottom: 0px;
 	top: 0px;
 	box-shadow: inset 0px 0px 10px 20px #fff3e6;
-`
-
-const SideImg = styled.img`
-  width: 95%;
+  padding-right: 5%;
 `
 
 export default function OurStory({ children }) {
   return (
     <>
-    <Subtitle style={{marginBottom: '0px'}}>Our Engagement</Subtitle>
-      <div className="container-img-two-columns" style={{maxWidth: '1300px'}}>
+      <Subtitle style={{ marginBottom: '0px' }}>Our Engagement</Subtitle>
+      <div className="container-img-two-columns" style={{ maxWidth: '1300px' }}>
         <SideImgDiv className="img-column">
-          <SideImg src="/img/engagement/FadedLaugh.JPG" />
+          <Image className="width95" src={SideImg} />
           <FadeContainer></FadeContainer>
         </SideImgDiv>
         <section className="text-column">
           <Story>
-          <br />
-            <img src="/img/heart.svg" style={{ width: '1.5em' }} />
+            <br />
+            <Image src={HeartSvg} width={26} height={26} />
             <br />
 
             Between the undulating foothills and the soaring peaks of beautiful wildrose country,
@@ -57,14 +56,13 @@ export default function OurStory({ children }) {
             all together due to the seemingly never ending pandemic.
             Blissfully however, we are ecstatic and overjoyed to share our big special day with you.
             <br />
-
-            <img src="/img/heart.svg" style={{ width: '1.5em',paddingTop: '0.5em' }} />
+            <Image src={HeartSvg} width={26} height={26} />
             <br />
             <br />
             <div className="text-align-center">
-            <Link href="/gallery" className="pointer-on-hover" passHref>
-              <Button type="button" className="button-gold color-light-gold">Gallery</Button>
-            </Link>
+              <Link href="/gallery" className="pointer-on-hover" passHref>
+                <Button type="button" className="button-gold color-light-gold">Gallery</Button>
+              </Link>
             </div>
           </Story>
         </section>

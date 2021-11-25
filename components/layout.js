@@ -1,6 +1,8 @@
 import Title from './title'
 import styled from 'styled-components'
 import Link from 'next/link'
+import Image from 'next/image'
+import LikeSvg from '../public/img/like.svg'
 
 const LeftFloat = styled.span`
   width: 100%;
@@ -40,7 +42,7 @@ export default function Layout({ children }) {
 
                         <div style={{ color: 'gray', margin: '.5em' }}>
                             Made with&nbsp;
-                            <img src="/img/like.svg" style={{ height: '.8em' }} /> by
+                            <Image src={LikeSvg} width={15} height={15} /> by
                             Regina
                         </div>
                         

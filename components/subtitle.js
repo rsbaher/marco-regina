@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Subtitle = styled.h2`
   color:  ${props => props.color};
-  font-family: great_vibes, adlery_swash;
+  font-family: 'Great Vibes', cursive;
   font-size: 5em;
   font-weight: bold;
   text-align: center;
