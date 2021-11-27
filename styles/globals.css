@@ -70,7 +70,7 @@ body {
 
 
 .background {
-  background-image: url("/img/Cover-01.jpeg");
+  background-image: url("/img/Cover-Final.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -118,6 +118,13 @@ body {
 
 .text-align-center {
   text-align: center;
+}
+
+ul.two-columns {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  padding-left: 15%;
 }
 
 .content2Button {
@@ -202,7 +209,9 @@ body {
 .underline:hover{
   text-decoration: underline;
 }
-
+.top-padding-sm{
+  padding-top: 1em;
+}
 .title-gold {
   color: #cba135;
   font-weight: bold;
@@ -297,6 +306,7 @@ body {
     grid-gap: 1em;
     margin: auto;
     max-width: 700px;
+    justify-items: center;
   }
 
   .img-column{
@@ -307,4 +317,26 @@ body {
   .text-column{
     margin-top: -100px
   }
+}
+
+.modal-content {
+  -webkit-box-shadow: -1px 1px 5px 9px #333;
+  -moz-box-shadow: -1px 1px 5px 9px #333;
+  box-shadow: -1px 1px 50px 1px #333;
+  background: #fff3e6 !important;
+  padding: 1em;
+  min-width: 400px;
+}
+
+
+.modal-body {
+  max-width: 95%;
+  background-color: #fff3e6 !important;
+  padding: 5%;
+}
+
+.modal-body img {
+  width: auto;
+  height: 150px;
+  
 }
