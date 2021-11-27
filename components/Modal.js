@@ -10,7 +10,7 @@ export default function Modal(props) {
     let  amenities = props.hotel.amenities
     return (
         <>
-            <Popup trigger={<Button type="button" className="button-gold color-light-pink">Popup Trigger</Button>}
+            <Popup trigger={<Button type="button" className="button-gold color-light-pink">More Details</Button>}
                 position="center center" className="modal" modal>
                 <div className="modal-body">
                     <CardTitle className="text-align-center">{props.title}</CardTitle>
