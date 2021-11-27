@@ -6,6 +6,7 @@ import Button from '../components/button'
 import Floral from '../components/Floral'
 import CardTitle from '../components/CardTitle'
 import React from 'react';
+import Modal from '../components/Modal'
 
 const ChildDiv = styled.div`
 position: relative;
@@ -28,8 +29,8 @@ export default function Gallery() {
   return (
     <>
       <section className="content1">
-        <Subtitle style={{marginBottom: '0.5em'}}>The Details</Subtitle>
-        
+        <Subtitle style={{ marginBottom: '0.5em' }}>The Details</Subtitle>
+
         <div className="container-three-columns">
 
           <Card className="background-color-light-pink">
@@ -93,54 +94,70 @@ export default function Gallery() {
       <section className="content2">
         <Floral />
 
-        <Subtitle style={{marginBottom: '0.5em', paddingTop: '1em'}}>Hotel Options</Subtitle>
+        <Subtitle style={{ marginBottom: '0.5em', paddingTop: '1em' }}>Hotel Options</Subtitle>
         <div className="container-two-columns" style={{ maxWidth: '900px', }}>
+         
           <Card className="background-color-light-pink">
-            <CardTitle style={{ textAlign: 'center', }}>{hotel1.name}</CardTitle>
-
-            <div>{hotel1.addr.l1}</div>
-            <div>{hotel1.addr.l2}</div>
-            <div>{hotel1.addr.l3}</div>
-
-            <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel1.addr.url}
-              target="_blank">Directions</a></div>
+            <CardTitle className="text-align-center">{hotel1.name}</CardTitle>
+            <div className="title-container-two-columns top-padding-sm" >
+              <div className="text-align-right">
+                <div>{hotel1.addr.l1}</div>
+                <div>{hotel1.addr.l2}&nbsp;{hotel1.addr.l3}</div>
+                <div></div></div>
+              <div className="text-align-left"><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel1.addr.url}
+                target="_blank">Directions</a></div>
+            </div>
+            <div className="text-align-center top-padding-sm">
+              <Modal title="Hotel Details" hotel={hotel1} /></div>
           </Card>
 
           <Card className="background-color-light-pink">
-            <CardTitle style={{ textAlign: 'center', }}>{hotel2.name}</CardTitle>
+            <CardTitle className="text-align-center">{hotel2.name}</CardTitle>
+            <div className="title-container-two-columns top-padding-sm" >
+              <div className="text-align-right">
+                <div>{hotel2.addr.l1}</div>
+                <div>{hotel2.addr.l2}&nbsp;{hotel2.addr.l3}</div>
+                <div></div></div>
 
-            <div>{hotel2.addr.l1}</div>
-            <div>{hotel2.addr.l2}</div>
-            <div>{hotel2.addr.l3}</div>
-
-            <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel2.addr.url}
-              target="_blank">Directions</a></div>
+              <div className="text-align-left"><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel2.addr.url}
+                target="_blank">Directions</a></div>
+            </div>
+            <div className="text-align-center top-padding-sm">
+              <Modal title="Hotel Details" hotel={hotel2} /></div>
           </Card>
 
           <Card className="background-color-light-pink">
-            <CardTitle style={{ textAlign: 'center', }}>{hotel3.name}</CardTitle>
+            <CardTitle className="text-align-center">{hotel3.name}</CardTitle>
+            <div className="title-container-two-columns top-padding-sm" >
+              <div className="text-align-right">
+                <div>{hotel3.addr.l1}</div>
+                <div>{hotel3.addr.l2}&nbsp;{hotel3.addr.l3}</div>
+                <div></div></div>
 
-            <div>{hotel3.addr.l1}</div>
-            <div>{hotel3.addr.l2}</div>
-            <div>{hotel3.addr.l3}</div>
-
-            <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel3.addr.url}
-              target="_blank">Directions</a></div>
+              <div className="text-align-left"><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel3.addr.url}
+                target="_blank">Directions</a></div>
+            </div>
+            <div className="text-align-center top-padding-sm">
+              <Modal title="Hotel Details" hotel={hotel3} /></div>
           </Card>
 
           <Card className="background-color-light-pink">
-            <CardTitle style={{ textAlign: 'center', }}>{hotel4.name}</CardTitle>
+            <CardTitle className="text-align-center">{hotel4.name}</CardTitle>
+            <div className="title-container-two-columns top-padding-sm" >
+              <div className="text-align-right">
+                <div>{hotel4.addr.l1}</div>
+                <div>{hotel4.addr.l2}&nbsp;{hotel4.addr.l3}</div>
+                <div></div></div>
 
-            <div>{hotel4.addr.l1}</div>
-            <div>{hotel4.addr.l2}</div>
-            <div>{hotel4.addr.l3}</div>
-
-            <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel4.addr.url}
-              target="_blank">Directions</a></div>
+              <div className="text-align-left"><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel4.addr.url}
+                target="_blank">Directions</a></div>
+            </div>
+            <div className="text-align-center top-padding-sm">
+              <Modal title="Hotel Details" hotel={hotel4} /></div>
           </Card>
         </div>
         <br />
-        <Link href="/"  passHref><CardTitle className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
+        <Link href="/" passHref><CardTitle className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
         <br />
       </section>
     </>
