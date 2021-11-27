@@ -96,62 +96,63 @@ export default function Gallery() {
 
         <Subtitle style={{ marginBottom: '0.5em', paddingTop: '1em' }}>Hotel Options</Subtitle>
         <div className="container-two-columns" style={{ maxWidth: '900px', }}>
+         
           <Card className="background-color-light-pink">
             <CardTitle className="text-align-center">{hotel1.name}</CardTitle>
-            <div className="title-container-two-columns top-padding-sm" style={{justifyItems: 'center'}}>
-              <div>
+            <div className="title-container-two-columns top-padding-sm" >
+              <div className="text-align-right">
                 <div>{hotel1.addr.l1}</div>
-                <div>{hotel1.addr.l2}</div>
-                <div>{hotel1.addr.l3}</div></div>
-              <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel1.addr.url}
+                <div>{hotel1.addr.l2}&nbsp;{hotel1.addr.l3}</div>
+                <div></div></div>
+              <div className="text-align-left"><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel1.addr.url}
                 target="_blank">Directions</a></div>
             </div>
-            <div className="text-align-center">
+            <div className="text-align-center top-padding-sm">
               <Modal title="Hotel Details" hotel={hotel1} /></div>
           </Card>
 
           <Card className="background-color-light-pink">
             <CardTitle className="text-align-center">{hotel2.name}</CardTitle>
-            <div className="title-container-two-columns top-padding-sm" style={{justifyItems: 'center'}}>
-              <div>
+            <div className="title-container-two-columns top-padding-sm" >
+              <div className="text-align-right">
                 <div>{hotel2.addr.l1}</div>
-                <div>{hotel2.addr.l2}</div>
-                <div>{hotel2.addr.l3}</div></div>
+                <div>{hotel2.addr.l2}&nbsp;{hotel2.addr.l3}</div>
+                <div></div></div>
 
-              <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel2.addr.url}
+              <div className="text-align-left"><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel2.addr.url}
                 target="_blank">Directions</a></div>
             </div>
-            <div className="text-align-center">
+            <div className="text-align-center top-padding-sm">
               <Modal title="Hotel Details" hotel={hotel2} /></div>
           </Card>
 
           <Card className="background-color-light-pink">
             <CardTitle className="text-align-center">{hotel3.name}</CardTitle>
-            <div className="title-container-two-columns top-padding-sm" style={{justifyItems: 'center'}}>
-              <div>
+            <div className="title-container-two-columns top-padding-sm" >
+              <div className="text-align-right">
                 <div>{hotel3.addr.l1}</div>
-                <div>{hotel3.addr.l2}</div>
-                <div>{hotel3.addr.l3}</div></div>
+                <div>{hotel3.addr.l2}&nbsp;{hotel3.addr.l3}</div>
+                <div></div></div>
 
-              <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel3.addr.url}
+              <div className="text-align-left"><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel3.addr.url}
                 target="_blank">Directions</a></div>
             </div>
-            <div className="text-align-center">
+            <div className="text-align-center top-padding-sm">
               <Modal title="Hotel Details" hotel={hotel3} /></div>
           </Card>
 
           <Card className="background-color-light-pink">
             <CardTitle className="text-align-center">{hotel4.name}</CardTitle>
-            <div className="title-container-two-columns top-padding-sm" style={{justifyItems: 'center'}}>
-              <div>
+            <div className="title-container-two-columns top-padding-sm" >
+              <div className="text-align-right">
                 <div>{hotel4.addr.l1}</div>
-                <div>{hotel4.addr.l2}</div>
-                <div>{hotel4.addr.l3}</div></div>
+                <div>{hotel4.addr.l2}&nbsp;{hotel4.addr.l3}</div>
+                <div></div></div>
 
-              <div><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel4.addr.url}
+              <div className="text-align-left"><a className="title-gold pointer-on-hover" rel="noreferrer" href={hotel4.addr.url}
                 target="_blank">Directions</a></div>
             </div>
-            <div className="text-align-center">
+            <div className="text-align-center top-padding-sm">
               <Modal title="Hotel Details" hotel={hotel4} /></div>
           </Card>
         </div>

@@ -120,6 +120,14 @@ body {
   text-align: center;
 }
 
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
 ul.two-columns {
   columns: 2;
   -webkit-columns: 2;
@@ -306,6 +314,7 @@ ul.two-columns {
     grid-gap: 1em;
     margin: auto;
     max-width: 700px;
+    justify-content: center !important;
     justify-items: center;
   }
 
