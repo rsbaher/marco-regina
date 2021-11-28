@@ -47,10 +47,6 @@ export default function CountdownSection({ children }) {
     <>
       <CountdownDiv>
         <Countdown date={wedDate} renderer={renderer} />
-        <br />
-        OR
-        <br />
-        <Countdown date={wedDate} renderer={renderer2} />
       </CountdownDiv>
     </>
   )

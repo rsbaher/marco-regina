@@ -42,10 +42,6 @@ export default function Gallery() {
             <div className="font-taj-bold">The Reception</div>
             <div className="color-gold"><span className="bold">Cocktail Hour:</span> {process.env.WEDDING_TIME.cocktail}</div>
             <div className="color-gold"><span className="bold">Dinner Start:</span> {process.env.WEDDING_TIME.dinner}</div>
-            <br />
-            <div className="font-taj-bold">Photos at Jacaranda</div>
-            <div className="color-gold"><span className="bold">Start Time:</span> {process.env.WEDDING_TIME.photo}</div>
-
           </Card>
 
           <Card className="background-color-light-pink">

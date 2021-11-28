@@ -47,7 +47,7 @@ export default function OurStory({ children }) {
         <section className="text-column">
           <Story>
             <br />
-            <Image src={HeartSvg} width={26} height={26} />
+            <Image src={HeartSvg} width={26} height={26} alt="Cartoon icon of a grey heart"/>
             <br />
 
             Between the undulating foothills and the soaring peaks of beautiful wildrose country,
@@ -56,12 +56,12 @@ export default function OurStory({ children }) {
             all together due to the seemingly never ending pandemic.
             Blissfully however, we are ecstatic and overjoyed to share our big special day with you.
             <br />
-            <Image src={HeartSvg} width={26} height={26} />
+            <Image src={HeartSvg} width={26} height={26} alt="Cartoon icon of a grey heart"/>
             <br />
             <br />
             <div className="text-align-center">
               <Link href="/gallery" className="pointer-on-hover" passHref>
-                <Button type="button" className="button-gold color-light-gold">Gallery</Button>
+                <Button type="button" className="button-gold button-pink-hover color-light-gold">Gallery</Button>
               </Link>
             </div>
           </Story>

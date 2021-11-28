@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Great Vibes';
+  src: url(../public/fonts/GreatVibes-Regular.ttf)  format('truetype');
+}
+
 html,
 body,
 #__next {
@@ -9,11 +14,26 @@ body {
   font-family: 'El Messiri', sans-serif;
 }
 
+h1.title {
+  color:  #ffe9e3;
+  font-family: 'Great Vibes', cursive;
+  font-size: 5.5em;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 3.3em;
+}
+.title-container{
+  display: contents;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+}
+
 .container {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100% repeat(3, auto);
+  grid-template-rows: 100% repeat(2, auto) minmax(166px, auto);
   grid-template-areas: "content0"
         "content1"
         "content2"
@@ -172,14 +192,16 @@ ul.two-columns {
 .button-gold{
   background-color: #cba135;
   font-size: 1em;
-  border:  #cba135 solid 5px;
+  border:  #cba135 solid 3px;
 }
 
 .button-gold:hover{
-  background-color: transparent;
+  background-color: rgba(255, 233, 227, 0.5);
   color: #cba135;
-  font-size: 1em;
-  border:  #cba135 solid 5px;
+}
+.button-pink-hover:hover{
+  background-color: #ffdfd5;
+  color: #cba135;
 }
 
 .color-light-pink {
@@ -281,6 +303,12 @@ ul.two-columns {
 }
 
 @media (max-width: 600px){
+  h1.title {
+    font-size: 4.5em;
+    margin-top: 0.3em;
+    font-weight: normal;
+  }
+
   .container-two-columns{
     display: grid;
     grid-template-columns: 1fr;

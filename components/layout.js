@@ -30,7 +30,9 @@ export default function Layout({ children }) {
                 <section className="background" />
                 <div className="container">
                     <section className="content0">
-                    <Link href="/" passHref><Title className="color-white pointer-on-hover">Marco & Regina</Title></Link>
+                    <div className="title-container">
+                        <Link href="/" passHref><h1 className="title pointer-on-hover">Marco & Regina</h1></Link>
+                    </div>
                     </section>
 
                     {children}
@@ -42,7 +44,7 @@ export default function Layout({ children }) {
 
                         <div style={{ color: 'gray', margin: '.5em' }}>
                             Made with&nbsp;
-                            <Image src={LikeSvg} width={15} height={15} /> by
+                            <Image src={LikeSvg} width={15} height={15} alt="Cartoon icon of a red heart"/> by
                             Regina
                         </div>
                         

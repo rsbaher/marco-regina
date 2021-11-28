@@ -37,6 +37,7 @@ export default function DetailsSection ({ children }) {
               src={ArchSvg}
               width={125}
               height={125}
+              alt="Cartoon icon of a tan wedding arch"
             /></div>
             <div className="color-gold">{ process.env.CEREMONY_ADDR.l1 }</div>
             <div className="color-gold">{ process.env.CEREMONY_ADDR.l2 }</div>
@@ -58,6 +59,7 @@ export default function DetailsSection ({ children }) {
               src={RingsSvg}
               width={125}
               height={125}
+              alt="Cartoon icon a diamond ring and gold wedeing band"
             /></div>
             <div className="color-gold">{ process.env.RECEPTION_ADDR.l1 }</div>
             <div className="color-gold">{ process.env.RECEPTION_ADDR.l2 }</div>

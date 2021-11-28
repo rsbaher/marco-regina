@@ -4,7 +4,7 @@ const Title = styled.h1`
   color:  ${props => props.color};
   font-family: 'Great Vibes', cursive;
   font-size: 5.5em;
-  font-weight: 550;
+  font-weight: 500;
   text-align: center;
   margin-top: 3.3em;
 
