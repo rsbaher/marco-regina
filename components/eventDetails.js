@@ -1,6 +1,4 @@
-import styled from 'styled-components'
 import Subtitle from './subtitle'
-import Card from './card'
 import Link from 'next/link'
 import Button from './button'
 import CardTitle from './CardTitle'
@@ -15,15 +13,15 @@ export default function EventDetails ({ children }) {
           The Details
         </Subtitle>
         <div className="container-two-columns">
-          <Card className="background-color-light-pink">
+          <div className="cards-div background-color-light-pink">
             <CardTitle style={{ textAlign: 'center', }}>Itenerary</CardTitle>
-          </Card>
-          <Card className="background-color-light-pink">
+          </div>
+          <div className="cards-div background-color-light-pink">
             <CardTitle style={{ textAlign: 'center', }}>Meal Options</CardTitle>
-          </Card>
-          <Card className="background-color-light-pink">
+          </div>
+          <div className="cards-div background-color-light-pink">
             <CardTitle style={{ textAlign: 'center', }}>Hotels</CardTitle>
-          </Card>
+          </div>
         </div>
         <br />
         <div className="text-align-center">

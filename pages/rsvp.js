@@ -10,9 +10,7 @@ import Checkbox from '../components/checkbox'
 import { getFormData, uuidv4 } from '../utilities/helper'
 import 'react-toastify/dist/ReactToastify.css'
 import RSVPForm from '../components/RSVPForm'
-import Layout from '../components/layout'
 import Floral from '../components/Floral'
-import Card from '../components/card'
 import CardTitle from '../components/CardTitle'
 
 const formURL = process.env.FORM_URL
@@ -58,19 +56,19 @@ export default function RSVP () {
     <section className="content1">
     <Subtitle style={{ width: '100%'}}>Event Details</Subtitle>
       <DivContainer2>
-        <Card style={{ textAlign: 'center'}} className="background-color-light-pink">
+        <div style={{ textAlign: 'center'}} className="cards-div background-color-light-pink">
           <CardTitle>Itenerary</CardTitle>
           <p>Itenerary with google maps embeded  and average travel times</p>
-        </Card>
-        <Card style={{ textAlign: 'center', }} className="background-color-light-pink">
+        </div>
+        <div style={{ textAlign: 'center', }} className="cards-div background-color-light-pink">
           <CardTitle>Hotels</CardTitle>
           <p>List Hotel Options</p>
           <p>Please select if you would like to join into the room block, if so please select the hotel you prefer. Find hotel that has shuttle</p>
-        </Card>
-        <Card style={{ textAlign: 'center', }} className="background-color-light-pink">
+        </div>
+        <div style={{ textAlign: 'center', }} className="cards-div background-color-light-pink">
           <CardTitle>Meal Options</CardTitle>
           <p>Describe options</p>
-        </Card>
+        </div>
       </DivContainer2>
     </section>
     <section className="content2">

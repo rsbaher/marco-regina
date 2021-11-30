@@ -1,9 +1,5 @@
-import styled from 'styled-components'
 import Subtitle from './subtitle'
 import CountdownSection from './Countdown'
-import Card from '../components/card'
-import Link from 'next/link'
-import Button from './button'
 import CardTitle from './CardTitle'
 import React from 'react';
 import Image from 'next/image'
@@ -22,7 +18,8 @@ export default function DetailsSection ({ children }) {
         <CountdownSection />
         <br />
         <div className="container-two-columns">
-          <Card style={{ textAlign: 'right' }} className="background-color-light-pink">
+
+          <div style={{ textAlign: 'right' }} className=" cards-div background-color-light-pink">
             <CardTitle>Holy Matrimony</CardTitle>
             <div>{ wedDate.toDateString() }</div>
             <div className="font-taj-bold">{ process.env.WEDDING_TIME.ceremony }</div>
@@ -42,9 +39,9 @@ export default function DetailsSection ({ children }) {
             <div className="color-gold">{ process.env.CEREMONY_ADDR.l1 }</div>
             <div className="color-gold">{ process.env.CEREMONY_ADDR.l2 }</div>
             <div className="color-gold">{ process.env.CEREMONY_ADDR.l3 }</div>
-          </Card>
+          </div>
           
-          <Card className="background-color-light-pink">
+          <div className="cards-div background-color-light-pink">
             <CardTitle>Wedding Reception</CardTitle>
             <div>{ wedDate.toDateString() }</div>
             <div className="font-taj-bold">{ process.env.WEDDING_TIME.cocktail }</div>
@@ -64,7 +61,7 @@ export default function DetailsSection ({ children }) {
             <div className="color-gold">{ process.env.RECEPTION_ADDR.l1 }</div>
             <div className="color-gold">{ process.env.RECEPTION_ADDR.l2 }</div>
             <div className="color-gold">{ process.env.RECEPTION_ADDR.l3 }</div>
-          </Card>
+          </div>
         </div>
     </>
   )
