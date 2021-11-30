@@ -11,6 +11,6 @@ const FloralImg = styled.img`
 
 export default function Floral({ children }) {
   return (
-    <FloralImg src="/img/floral3.png" />
+    <FloralImg src="/img/Floral1.png" />
   )
 }
