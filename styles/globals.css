@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Great Vibes';
+  src: url(../public/fonts/GreatVibes-Regular.ttf)  format('truetype');
+}
+
 html,
 body,
 #__next {
@@ -9,11 +14,26 @@ body {
   font-family: 'El Messiri', sans-serif;
 }
 
+h1.title {
+  color:  #ffe9e3;
+  font-family: 'Great Vibes', cursive;
+  font-size: 5.5em;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 3.3em;
+}
+.title-container{
+  display: contents;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+}
+
 .container {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100% repeat(3, auto);
+  grid-template-rows: 100% repeat(2, auto) minmax(166px, auto);
   grid-template-areas: "content0"
         "content1"
         "content2"
@@ -78,6 +98,36 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+.floral-img {
+  width: 50%;
+  max-width: 600px;
+  min-width: 20em;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(180deg);
+  position: absolute;
+}
+.countdown-number {
+  color: #cba135;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0.2em;
+}
+.countdown-div {
+  color: #c7a298;
+  font-size: 1.5em;
+  text-align: center;
+}
+.cards-div{
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  font-family: 'El Messiri', sans-serif;
+  line-height: 1.5em;
+  padding: 1em;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
 }
 
 .content0 {
@@ -169,17 +219,38 @@ ul.two-columns {
   background: linear-gradient(116deg, #f3f0c7, #eab75f);
 }
 
+p.story {
+  color: #6f6e77;
+  font-family: 'El Messiri', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin: auto;
+  max-width: 750px;
+  padding: 0 2em;
+  text-align: center;
+}
+
+.button-style{
+  font-weight: bold;
+  outline: none;
+  padding: 1em 2em;
+  border:  #cba135 solid 3px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
 .button-gold{
   background-color: #cba135;
   font-size: 1em;
-  border:  #cba135 solid 5px;
+  border:  #cba135 solid 3px;
 }
 
 .button-gold:hover{
-  background-color: transparent;
+  background-color: rgba(255, 233, 227, 0.5);
   color: #cba135;
-  font-size: 1em;
-  border:  #cba135 solid 5px;
+}
+.button-pink-hover:hover{
+  background-color: #ffdfd5;
+  color: #cba135;
 }
 
 .color-light-pink {
@@ -264,6 +335,22 @@ ul.two-columns {
   margin-right: -20px;
 }
 
+div.side-img {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+div.faded-side-img {
+  width: 95%;
+	position: absolute;
+	bottom: 0px;
+	top: 0px;
+	box-shadow: inset 0px 0px 10px 20px #fff3e6;
+  padding-right: 5%;
+}
+
+
 @media (max-width: 900px){
   .container-img-two-columns{
     display: grid;
@@ -281,6 +368,16 @@ ul.two-columns {
 }
 
 @media (max-width: 600px){
+  h1.title {
+    font-size: 4.5em;
+    margin-top: 0.3em;
+    font-weight: normal;
+  }
+
+  p.story {
+    padding: 0 1em;
+  }
+
   .container-two-columns{
     display: grid;
     grid-template-columns: 1fr;

@@ -1,7 +1,6 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
 import '../node_modules/reactjs-popup/dist/index.css';
-import Button from './button'
 import CardTitle from './CardTitle'
 import Link from 'next/link'
 
@@ -10,7 +9,7 @@ export default function Modal(props) {
     let  amenities = props.hotel.amenities
     return (
         <>
-            <Popup trigger={<Button type="button" className="button-gold color-light-pink">More Details</Button>}
+            <Popup trigger={<button type="button" className="button-style button-gold color-light-pink pointer-on-hover">More Details</button>}
                 position="center center" className="modal" modal>
                 <div className="modal-body">
                     <CardTitle className="text-align-center">{props.title}</CardTitle>
