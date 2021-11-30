@@ -10,13 +10,6 @@ const CountdownDiv = styled.div`
   text-align: center;
 `
 
-const CountdownNumber = styled.span`
-  color: #cba135;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 0 0.2em;
-`
-
 export default function CountdownSection({ children }) {
   const wedDate = new Date(process.env.WEDDING_DATE);
   const [counter, setCounter] = useState(60);
@@ -27,27 +20,23 @@ export default function CountdownSection({ children }) {
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      return (<span>Days left. We made it!</span>);
+      return (<div>0 Days left. We made it!</div>);
     } else {
-      let months = Math.floor(days/30)
-      let daysLeft = days - (months  * 30)
-      return (<span> <CountdownNumber>{months}</CountdownNumber> Months <CountdownNumber>{daysLeft}</CountdownNumber> days <CountdownNumber>{hours}</CountdownNumber>:<CountdownNumber>{minutes}</CountdownNumber>:<CountdownNumber>{seconds}</CountdownNumber> To Go!</span>);
-    }
-  };
-
-  const renderer2 = ({ days, hours, minutes, seconds, completed }) => {
-    if (completed) {
-      return (<span>Days left. We made it!</span>);
-    } else {
-      return (<span> <CountdownNumber>{days}</CountdownNumber> days <CountdownNumber>{hours}</CountdownNumber>Hours <CountdownNumber>{minutes}</CountdownNumber> mins and <CountdownNumber>{seconds}</CountdownNumber> seconds To Go!</span>);
+      let months = Math.floor(days / 30)
+      let daysLeft = days - (months * 30)
+      if (months == 0) {
+        return (<> <span className="countdown-number">{days}</span> days <span className="countdown-number">{hours}</span>Hours <span className="countdown-number">{minutes}</span> mins and <span className="countdown-number">{seconds}</span> seconds To Go!</>);
+      } else {
+        return (<> <span className="countdown-number">{months}</span> Months <span className="countdown-number">{daysLeft}</span> days <span className="countdown-number">{hours}</span>:<span className="countdown-number">{minutes}</span>:<span className="countdown-number">{seconds}</span> To Go!</>);
+      }
     }
   };
 
   return (
     <>
-      <CountdownDiv>
+      <div className="countdown-div">
         <Countdown date={wedDate} renderer={renderer} />
-      </CountdownDiv>
+      </div>
     </>
   )
 }

@@ -108,6 +108,17 @@ h1.title {
   transform: translate3d(-50%, -50%, 0) rotate(180deg);
   position: absolute;
 }
+.countdown-number {
+  color: #cba135;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0.2em;
+}
+.countdown-div {
+  color: #c7a298;
+  font-size: 1.5em;
+  text-align: center;
+}
 
 .content0 {
   grid-area: 'content0'
