@@ -219,6 +219,17 @@ ul.two-columns {
   background: linear-gradient(116deg, #f3f0c7, #eab75f);
 }
 
+p.story {
+  color: #6f6e77;
+  font-family: 'El Messiri', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin: auto;
+  max-width: 750px;
+  padding: 0 2em;
+  text-align: center;
+}
+
 .button-style{
   font-weight: bold;
   outline: none;
@@ -324,6 +335,22 @@ ul.two-columns {
   margin-right: -20px;
 }
 
+div.side-img {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+div.faded-side-img {
+  width: 95%;
+	position: absolute;
+	bottom: 0px;
+	top: 0px;
+	box-shadow: inset 0px 0px 10px 20px #fff3e6;
+  padding-right: 5%;
+}
+
+
 @media (max-width: 900px){
   .container-img-two-columns{
     display: grid;
@@ -345,6 +372,10 @@ ul.two-columns {
     font-size: 4.5em;
     margin-top: 0.3em;
     font-weight: normal;
+  }
+
+  p.story {
+    padding: 0 1em;
   }
 
   .container-two-columns{
