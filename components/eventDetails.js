@@ -1,6 +1,5 @@
 import Subtitle from './subtitle'
 import Link from 'next/link'
-import Button from './button'
 import CardTitle from './CardTitle'
 import React from 'react';
 
@@ -26,9 +25,9 @@ export default function EventDetails ({ children }) {
         <br />
         <div className="text-align-center">
           <Link href="/rsvp" className="pointer-on-hover" passHref>
-            <Button type="button" onClick="" className="button-gold color-light-gold">
+            <button type="button" onClick="" className="button-style button-gold color-light-gold">
               RSVP
-            </Button>
+            </button>
           </Link>
         </div>
     </>

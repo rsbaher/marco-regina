@@ -102,7 +102,8 @@ class InnerForm extends Component {
               value={values.pax}
             />
           )}
-          <Button
+          <button
+          className="button-style"
             style={styles.submitButton}
             type="submit"
             disabled={isSubmitting}
@@ -111,7 +112,7 @@ class InnerForm extends Component {
               <img asrc="/img/bars.svg" style={styles.spinner} />
             )}
             <span style={{}}>Submit</span>
-          </Button>
+          </button>
         </form>
       )
     }

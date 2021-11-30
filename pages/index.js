@@ -2,7 +2,6 @@ import OurStory from '../components/OurStory'
 import DetailsSection from '../components/DetailsSection'
 import Floral from '../components/Floral'
 import Link from 'next/link'
-import Button from '../components/button'
 
 export default function Home() {
 
@@ -17,17 +16,17 @@ export default function Home() {
         <br />
         <div className="text-align-center">
           <Link href="/details" className="pointer-on-hover" passHref>
-            <Button type="button" onClick="" className="button-gold color-light-pink">
+            <button type="button" onClick="" className="button-style button-gold color-light-pink">
               Event Details
-            </Button>
+            </button>
           </Link>
         </div>
         <br />
         <div className="text-align-center">
         <Link href="/rsvp" className="pointer-on-hover" passHref>
-            <Button type="button" onClick="" className="button-gold color-light-pink">
+            <button type="button" onClick="" className="button-style button-gold color-light-pink">
               RSVP
-            </Button>
+            </button>
           </Link>
         </div>
       </section>

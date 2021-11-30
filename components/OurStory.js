@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Subtitle from '../components/subtitle'
-import Button from '../components/button'
 import Link from 'next/link'
 import Image from 'next/image'
 import HeartSvg from '../public/img/heart.svg'
@@ -61,7 +60,7 @@ export default function OurStory({ children }) {
             <br />
             <div className="text-align-center">
               <Link href="/gallery" className="pointer-on-hover" passHref>
-                <Button type="button" className="button-gold button-pink-hover color-light-gold">Gallery</Button>
+                <button type="button" className="button-style button-gold button-pink-hover color-light-gold">Gallery</button>
               </Link>
             </div>
           </Story>

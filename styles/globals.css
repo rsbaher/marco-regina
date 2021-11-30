@@ -219,6 +219,14 @@ ul.two-columns {
   background: linear-gradient(116deg, #f3f0c7, #eab75f);
 }
 
+.button-style{
+  font-weight: bold;
+  outline: none;
+  padding: 1em 2em;
+  border:  #cba135 solid 3px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
 .button-gold{
   background-color: #cba135;
   font-size: 1em;
