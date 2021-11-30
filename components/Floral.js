@@ -1,16 +1,10 @@
-import styled from 'styled-components'
+import Image from 'next/image'
 
-const FloralImg = styled.img`
-  width: 50%;
-  max-width: 35em;
-  min-width: 20em;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0) rotate(180deg);
-  position: absolute;
-`
 
 export default function Floral({ children }) {
   return (
-    <FloralImg src="/img/Floral1.png" />
+    <div className="floral-img">
+    <Image  src="/img/Floral1.png" width="600" height="313.385" alt="pink peach and white floral bouqet"/>
+    </div>
   )
 }
