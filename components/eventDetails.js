@@ -8,9 +8,9 @@ export default function EventDetails ({ children }) {
 
   return (
     <>
-        <Subtitle style={{ paddingTop: '2em', marginBottom: '.2em', marginTop: '0em' }}>
+        <h2 className="title">
           The Details
-        </Subtitle>
+        </h2>
         <div className="container-two-columns">
           <div className="cards-div background-color-light-pink">
             <CardTitle style={{ textAlign: 'center', }}>Itenerary</CardTitle>

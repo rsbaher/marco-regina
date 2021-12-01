@@ -1,4 +1,3 @@
-import Subtitle from './subtitle'
 import CountdownSection from './Countdown'
 import CardTitle from './CardTitle'
 import React from 'react';
@@ -11,9 +10,9 @@ export default function DetailsSection ({ children }) {
 
   return (
     <>
-        <Subtitle style={{ paddingTop: '2em', marginBottom: '.2em', marginTop: '0em' }}>
+        <h2 className="title">
           Our Wedding
-        </Subtitle>
+        </h2>
         
         <CountdownSection />
         <br />

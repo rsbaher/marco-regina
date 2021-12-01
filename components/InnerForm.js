@@ -122,7 +122,7 @@ class InnerForm extends Component {
   
       return (
         <SuccessPage>
-          <Subtitle>Thank you for your Response!</Subtitle>
+          <h2 className="title">Thank you for your Response!</h2>
           {values.locations &&
             values.locations.indexOf('sg') !== -1 && (
               <div

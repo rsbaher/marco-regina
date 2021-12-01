@@ -8,7 +8,7 @@ import SideImg from '../public/img/engagement/FadedLaugh.JPG'
 export default function OurStory({ children }) {
   return (
     <>
-      <Subtitle style={{ marginBottom: '0px' }}>Our Engagement</Subtitle>
+      <h2 className="title" >Our Engagement</h2>
       <div className="container-img-two-columns" style={{ maxWidth: '1300px' }}>
         <div className="side-img img-column">
           <Image className="width95" src={SideImg} />

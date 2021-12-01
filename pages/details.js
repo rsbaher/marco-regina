@@ -27,7 +27,7 @@ export default function Gallery() {
   return (
     <>
       <section className="content1">
-        <Subtitle style={{ marginBottom: '0.5em' }}>The Details</Subtitle>
+        <h2 style={{ marginBottom: '0.5em' }}>The Details</h2>
 
         <div className="container-three-columns">
 
@@ -88,7 +88,7 @@ export default function Gallery() {
       <section className="content2">
         <Floral />
 
-        <Subtitle style={{ marginBottom: '0.5em', paddingTop: '1em' }}>Hotel Options</Subtitle>
+        <h2 style={{ marginBottom: '0.5em', paddingTop: '1em' }}>Hotel Options</h2>
         <div className="container-two-columns" style={{ maxWidth: '900px', }}>
          
           <div className="cards-div background-color-light-pink">
