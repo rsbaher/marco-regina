@@ -1,15 +1,9 @@
 import { Component } from 'react'
 import { Formik, withFormik } from 'formik'
-import { ToastContainer, toast } from 'react-toastify'
 import styled from 'styled-components'
-import Subtitle from './subtitle'
-import Button from './button'
-import TextBox from './textbox'
-import RadioButton from './radiobutton'
-import Checkbox from './checkbox'
+
 import { getFormData, uuidv4 } from '../utilities/helper'
 import InnerForm from './InnerForm'
-import styles from '../components/rsvp.style'
 import 'react-toastify/dist/ReactToastify.css'
 
 const formURL = process.env.FORM_URL

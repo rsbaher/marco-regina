@@ -1,4 +1,3 @@
-import Subtitle from '../components/subtitle'
 import Link from 'next/link'
 import Image from 'next/image'
 import HeartSvg from '../public/img/heart.svg'

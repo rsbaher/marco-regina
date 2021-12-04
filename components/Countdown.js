@@ -1,14 +1,8 @@
-import styled from 'styled-components'
 import { useEffect, useState } from 'react'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Countdown from 'react-countdown';
 
-const CountdownDiv = styled.div`
-  color: #c7a298;
-  font-size: 1.5em;
-  text-align: center;
-`
 
 export default function CountdownSection({ children }) {
   const wedDate = new Date(process.env.WEDDING_DATE);

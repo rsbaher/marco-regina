@@ -1,4 +1,3 @@
-import Subtitle from '../components/subtitle'
 import Floral from '../components/GalleryFloral'
 
 export default function Gallery() {

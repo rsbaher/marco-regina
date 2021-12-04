@@ -4,29 +4,30 @@ import auth from '../../utilities/auth'
 export async function getServerSideProps({ query }) {
     const sheets = google.sheets({ version: 'v4', auth });
     const { id } = query;
-    const range = `reginabaher@gmail.com!A${id}:C${id}`;
+    //const range = `rsvp!A${id}:C${id}`;
+    const range = `rsvp!A2:H9`;
 
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET,
         range,
     });
 
-    const [title, content] = response.data.values[0];
-    console.log(title, content)
-
+    const values = response.data.values;
+    
+    console.log("Sheet values: ", values)
+    //const {Fname, Lname} = response.data.values[id];
     return {
         props: {
-            title,
-            content
+
         }
     }
 }
 
-export default function Post({ title, content }) {
+export default function Post({ }) {
     return (
         <section className="content1">
-            <h1>{title}</h1>
-            <div>{content}</div>
+            <h1>test</h1>
+            <div>test</div>
         </section>
     )
 

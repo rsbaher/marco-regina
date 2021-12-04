@@ -1,6 +1,5 @@
-//import moment from 'moment'
+import auth from './auth'
 
-export const icsDateFormat = 'YYYYMMDD[T]HHmmss[Z]'
 
 export const getFormData = object =>
   Object.keys(object).reduce((formData, key) => {
@@ -17,29 +16,26 @@ export function uuidv4() {
   )
 }
 
-export function generateICSURL(events) {
-  if (!events || events.length < 1) return ''
+export async function getSheetData() {
+  const data = null;
+  const sheets = google.sheets({ version: 'v4', auth });
+  const range = `rsvp!A2:H9`;
 
-  let ics =
-    'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:yycalendar\r\nMETHOD:PUBLISH\r\n'
-  events.forEach((event, index) => {
-    const vevent =
-      `BEGIN:VEVENT\r\nUID:yy-${index}\r\n` +
-     // `DTSTAMP:${moment.utc().format(icsDateFormat)}\r\n` +
-      `DTSTART:${escapeICS(event.start_date)}\r\n` +
-      `DTEND:${escapeICS(event.end_date)}\r\n` +
-      `SUMMARY:${escapeICS(event.summary)}\r\n` +
-      `LOCATION:${escapeICS(event.location)}\r\n` +
-      `DESCRIPTION:${escapeICS(event.description)}\r\n` +
-      `END:VEVENT\n`
-    ics += escape(vevent)
-  })
-  ics += 'BEGIN:VCALENDAR'
-  return ics
+  const response = await sheets.spreadsheets.values.get({
+    spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET,
+    range,
+  });
+
+  data = response.data.values;
+  console.log("Loaded data: ", data);
+  const FormatedData = formatData(data);
+  
+  return FormatedData
 }
 
-function escapeICS(value) {
-  if (!value) return value
+function formatData(data){
+  const formatted = {};
+  console.log("Formatting data...")
 
-  return value.replace(/,/gi, '\\,')
+  return formatted;
 }

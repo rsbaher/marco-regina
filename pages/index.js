@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Home() {
 
   return (
-    <div >
+    <div>
       <section className="content1">
         <OurStory />
       </section>

@@ -1,6 +1,4 @@
-import Subtitle from './subtitle'
 import Link from 'next/link'
-import CardTitle from './CardTitle'
 import React from 'react';
 
 export default function EventDetails ({ children }) {
@@ -13,13 +11,13 @@ export default function EventDetails ({ children }) {
         </h2>
         <div className="container-two-columns">
           <div className="cards-div background-color-light-pink">
-            <CardTitle style={{ textAlign: 'center', }}>Itenerary</CardTitle>
+            <h3 style={{ textAlign: 'center', }}>Itenerary</h3>
           </div>
           <div className="cards-div background-color-light-pink">
-            <CardTitle style={{ textAlign: 'center', }}>Meal Options</CardTitle>
+            <h3 style={{ textAlign: 'center', }}>Meal Options</h3>
           </div>
           <div className="cards-div background-color-light-pink">
-            <CardTitle style={{ textAlign: 'center', }}>Hotels</CardTitle>
+            <h3 style={{ textAlign: 'center', }}>Hotels</h3>
           </div>
         </div>
         <br />

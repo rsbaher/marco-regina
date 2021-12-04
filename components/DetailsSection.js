@@ -1,5 +1,4 @@
 import CountdownSection from './Countdown'
-import CardTitle from './CardTitle'
 import React from 'react';
 import Image from 'next/image'
 import RingsSvg from '../public/img/rings-colour.svg'
@@ -19,7 +18,7 @@ export default function DetailsSection ({ children }) {
         <div className="container-two-columns">
 
           <div style={{ textAlign: 'right' }} className=" cards-div background-color-light-pink">
-            <CardTitle>Holy Matrimony</CardTitle>
+            <h3>Holy Matrimony</h3>
             <div>{ wedDate.toDateString() }</div>
             <div className="font-taj-bold">{ process.env.WEDDING_TIME.ceremony }</div>
             <a className="title-gold pointer-on-hover"
@@ -41,7 +40,7 @@ export default function DetailsSection ({ children }) {
           </div>
           
           <div className="cards-div background-color-light-pink">
-            <CardTitle>Wedding Reception</CardTitle>
+            <h3>Wedding Reception</h3>
             <div>{ wedDate.toDateString() }</div>
             <div className="font-taj-bold">{ process.env.WEDDING_TIME.cocktail }</div>
             <a className="title-gold pointer-on-hover" 

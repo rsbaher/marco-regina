@@ -33,11 +33,6 @@ export default function GetInvitationForm() {
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
-        toast(`Oops! There is an error in your submission (err: ${errors})`, {
-          className: 'toast-background-err',
-          bodyClassName: 'toast-body',
-          progressClassName: 'toast-progress-err'
-        });
       }}
     >
 
@@ -50,7 +45,7 @@ export default function GetInvitationForm() {
             name="email"
             type="email"
           /></span>
-          <br/><ErrorMessage name="email" />
+          <br/><ErrorMessage className="error-form-input" name="email" />
 <br/>
           <button className="button-style button-gold color-pink form-button" type="submit">Get Invitation</button>
         </Form>
