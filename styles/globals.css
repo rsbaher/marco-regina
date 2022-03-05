@@ -39,6 +39,15 @@ h2 {
   margin-bottom: 5%;
 }
 
+h2.subtitle {
+  color: #cba135;
+  font-weight: lighter;
+  font-family: 'Sansita Swashed', cursive;
+  margin-top: -1em;
+  font-size: 4em;
+  font-stretch: ultra-expanded !important;
+}
+
 h2.title {
   margin-bottom: 0.2em;
   margin-top: 0em;
@@ -88,6 +97,16 @@ div.form-container {
   padding-right: 0.8em;
 }
 
+.form-input-label2 {
+  font-family: 'Sansita Swashed', cursive;
+  color: #cba135;
+  font-size: 1em;
+  font-weight: bold;
+  padding-right: 0.3em;
+  width: 100%;
+}
+
+
 .form-input-text {
   border: 1px solid transparent;
   border-radius: 4px;
@@ -98,6 +117,18 @@ div.form-container {
   padding: 0.6em 0.8em;
   transition: box-shadow 150ms ease;
   margin-right: 1.5em;
+}
+
+.form-input-select {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 #cba135;
+    font-size: 0.9em;
+    height: 2em;
+    outline: none; 
+    transition: box-shadow 150ms ease;
+    padding: 0em 0.5em;
+    width: 100%;
 }
 
 button.form-button {
@@ -145,6 +176,18 @@ button.form-button {
   margin: auto;
   max-width: 900px;
   padding: 1em;
+}
+
+.container-four-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  margin: auto;
+  max-width: 900px;
+  padding: 1em;
+  justify-items: center;
+  align-items: center;
 }
 
 .card-icon {
@@ -473,6 +516,14 @@ div.faded-side-img {
     max-width: 300px;
     padding: 1em;
   }
+  .container-four-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin: auto;
+    padding: 1em;
+  }
 
   .card-icon {
     position: absolute;
@@ -508,6 +559,22 @@ div.faded-side-img {
   background: #fff3e6 !important;
   padding: 1em;
   min-width: 400px;
+}
+
+.modal2-content {
+  -webkit-box-shadow: -1px 1px 5px 9px #333;
+  -moz-box-shadow: -1px 1px 5px 9px #333;
+  box-shadow: -1px 1px 50px 1px #333;
+  background: #fff3e6 !important;
+  padding: 1em;
+  min-width: 400px;
+  width: 70% !important;
+}
+
+.modal2-body {
+  max-width: 95%;
+  background-color: #fff3e6 !important;
+  padding: 5%;
 }
 
 .modal-body {

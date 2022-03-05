@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Floral from '../components/Floral'
 import React from 'react';
 import Modal from '../components/Modal'
+import Layout from '../components/layout'
 
 export default function Gallery() {
   const hotel1 = process.env.HOTELS[0];
@@ -9,7 +10,7 @@ export default function Gallery() {
   const hotel3 = process.env.HOTELS[2];
   const hotel4 = process.env.HOTELS[3];
   return (
-    <>
+    <Layout h1="Marco &amp; Regina" h2="Wedding Details">
       <section className="content1">
         <h2 style={{ marginBottom: '0.5em' }}>The Details</h2>
 
@@ -138,6 +139,6 @@ export default function Gallery() {
         <Link href="/" passHref><h3 className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</h3></Link>
         <br />
       </section>
-    </>
+    </Layout>
   )
 }

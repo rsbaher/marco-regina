@@ -1,9 +1,10 @@
 import Floral from '../components/GalleryFloral'
+import Layout from '../components/layout'
 
 export default function Gallery() {
   
   return (
-    <>
+    <Layout h1="Marco &amp; Regina" h2="Gallery">
       <section className="content1">
         <h2 className="title"itle>Engagement Photos</h2>
         <br/>
@@ -15,6 +16,6 @@ export default function Gallery() {
       <br/>
       <br/>
       </section>
-      </>
+      </Layout>
   )
 }

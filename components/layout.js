@@ -3,7 +3,10 @@ import Image from 'next/image'
 import LikeSvg from '../public/img/like.svg'
 
 
-export default function Layout({ children }) {
+export default function Layout(props) {
+    const Children = props.children
+    const h1 = props.h1
+    const h2 = props.h2
     return (
         <>
             <div style={{ height: '100%' }}>
@@ -11,11 +14,12 @@ export default function Layout({ children }) {
                 <div className="container">
                     <section className="content0">
                     <div className="title-container">
-                        <Link href="/" passHref><h1 className="title pointer-on-hover">Marco & Regina</h1></Link>
+                        <Link href="/" passHref><h1 className="title pointer-on-hover">{ h1 }</h1></Link>
+                        <h2 className="subtitle">{ h2 }</h2>
                     </div>
                     </section>
 
-                    {children}
+                    {Children}
 
                     <footer className="content3">
                         <div style={{ fontSize: '1.5em', marginTop: '1em' }}>
