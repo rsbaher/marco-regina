@@ -41,25 +41,88 @@ function formatData(data){
 function apiFormat(guests){}
 
 // Accepts an array of guests
-function formFormat(guests){
+function formFormat(data, mode=1){
   let formatted = [];
   console.log("Formatting data...")
-  guests.forEach(function (guest){
-    let fullname = guest.fullname.split(" ")
-    let meal = parseInt(guest.rsvpMeal)
-    let obj = {
-      fName: String(fullname[0]),
-      lName: String(fullname[1]),
-      email: String(guest.email),
-      rsvp: parseInt(guest.rsvpStatus),
-      meal: String(process.env.MEAL_OPTIONS[meal]),	
-      hotelRooms:	parseInt(guest.hotelRooms),
-      isUnder12: parseInt(guest.isUnder12),
-      isUnder21: parseInt(guest.isUnderage),
-    }
-    formatted.push(obj)
-  })
+  switch (mode) {
+    case 1:
+      data.forEach(function (guest){
+        let fullname = guest.fullname.split(" ")
+        let meal = parseInt(guest.rsvpMeal)
+        let obj = {
+          fName: String(fullname[0]),
+          lName: String(fullname[1]),
+          email: String(guest.email),
+          rsvp: parseInt(guest.rsvpStatus),
+          meal: String(process.env.MEAL_OPTIONS[meal]),	
+          hotelRooms:	parseInt(guest.hotelRooms),
+          isUnder12: parseInt(guest.isUnder12),
+          isUnder21: parseInt(guest.isUnderage),
+        }
+        formatted.push(obj)
+      })
+      break;
+    case 2:
+      data.forEach(function(codes){
+        let obj = {
+          code: String(codes.code),
+          email: String(codes.email)
+        }
+        formatted.push(obj)
+      })
+      break;
+    default:
+      break;
+  }
   return formatted;
+}
+
+export async function getCodes(code=null, email=null){
+  let URL = "/email-code/event/" + process.env.NEXT_PUBLIC_EVENT_ID
+
+  try { 
+    const response = await axios.get(URL);
+    console.log(response);
+    let results = formFormat(response.data)
+    
+    if(code){
+      results = results.filter(function(el){
+        return el.code == code
+        })
+    }
+    if(email){
+      results = results.filter(function(el){
+        return el.email == email
+        })
+    }
+    console.log(results);
+    return results
+
+  } catch (e) {
+      console.log("Error Retrieving Codes: ", e.toJSON());
+      return {error: "Error occured while retrieving data with email: "  + email}
+  }
+}
+
+export async function getGuestsUsingCode(code){
+  const codes = await getCodes(code, null)
+  let codeRes = codes[0]
+  let URL = "/guest-email/" + codeRes.email
+  console.log("getGuestsUsingCode URL: ", URL)
+
+  try { 
+    const response = await axios.get(URL);
+    console.log("getGuestsUsingCode response: ", response);
+    let results = formFormat(response.data)
+    console.log("getGuestsUsingCode results: ", results);
+    return results
+
+  } catch (e) {
+      console.log("Error Retrieving Guests using code: ", e.toJSON());
+      return {
+        error: "Error occured while retrieving data with code: " + code + " and  email: "+ codeRes.email
+      }
+  }
 }
 
 export async function getGuests(email=null){

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Context } from '../utilities/context'
 import Layout from '../components/layout'
 import GetInvitationForm from '../components/GetInvitationForm'
-import {getGuests} from '../utilities/helper'
+import {getCodes} from '../utilities/helper'
 
 function Home(pageProps) {
   const [ context, setContext ] = React.useState(Context)
@@ -39,13 +39,13 @@ function Home(pageProps) {
 }
 
 export async function getStaticProps(props) {
-  const data = await getGuests()
+  const data = await getCodes()
   console.log("rsvp.staticprops data[0]: ", data[0]);
   console.log("rsvp.staticprops props: ", props);
   return {
     props: {
       index: "index Data",
-      data: data[0],
+      codes: data,
       email: ""
     }
   }
