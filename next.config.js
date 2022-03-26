@@ -1,5 +1,4 @@
 const WEB_TITLE="Marco & Regina"
-const HASHTAG = "#MarcoAndRegina"
 const WEDDING_DATE="2022-09-04"
 const WEDDING_TIME = {
     ceremony: "3:00 pm",
@@ -7,7 +6,8 @@ const WEDDING_TIME = {
     dinner: "7:30 pm",
     photo: "4:30 pm"
 }
-
+const MEAL_OPTIONS = {0: "Chicken 1", 1: "Chicken 2"}
+const MEAL_DESC = {0: "Description of Chicken 1", 1: "Description of Chicken 2"}
 const CEREMONY_VENUE = "St. Mary Coptic Church"
 const RECEPTION_VENUE = "Jacaranda Country Club"
 
@@ -81,9 +81,11 @@ const HOTELS = [
     phone: "954-424-3300",
     url: "https://www.marriott.com/fllsi",
     amenities: ["10-12 USD Breakfast", "Free Internet Access", "Free Parking", "Pet Friendly", "Digital Check-In", "Mobile Key", "Outdoor Pool", "Gym"],
-    price: "195 USD"
+    price: "195 USD",
 },
 ]
+
+HOTEL_DISCOUNT = { key: 0, code: "XYZ1", percent: 15}
 
 module.exports = {
   reactStrictMode: true,
@@ -93,9 +95,12 @@ module.exports = {
     RECEPTION_VENUE: RECEPTION_VENUE,
     WEDDING_DATE: WEDDING_DATE,
     WEDDING_TIME: WEDDING_TIME,
+    MEAL_OPTIONS: MEAL_OPTIONS,
+    MEAL_DESC: MEAL_DESC,
     CEREMONY_ADDR: CEREMONY_ADDR,
     RECEPTION_ADDR: RECEPTION_ADDR,
     HOTELS: HOTELS,
+    HOTEL_DISCOUNT: HOTEL_DISCOUNT
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

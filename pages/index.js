@@ -1,12 +1,19 @@
+import React, { useContext, useState } from "react"
 import OurStory from '../components/OurStory'
 import DetailsSection from '../components/DetailsSection'
 import Floral from '../components/Floral'
 import Link from 'next/link'
+import { Context } from '../utilities/context'
+import Layout from '../components/layout'
+import GetInvitationForm from '../components/GetInvitationForm'
+import {getCodes} from '../utilities/helper'
 
-export default function Home() {
-
+function Home() {
+  const [context, setContext] = useContext(Context)
+  console.log("index context: ", context)
+  
   return (
-    <div >
+    <Layout h1="Marco &amp; Regina" h2="">
       <section className="content1">
         <OurStory />
       </section>
@@ -23,13 +30,24 @@ export default function Home() {
         </div>
         <br />
         <div className="text-align-center">
-        <Link href="/rsvp" className="pointer-on-hover" passHref>
-            <button type="button" onClick="" className="button-style button-gold color-light-pink">
-              RSVP
-            </button>
-          </Link>
+          <GetInvitationForm />
         </div>
+
       </section>
-    </div>
+    </Layout>
   )
 }
+
+export async function getStaticProps(props) {
+  let codes = await getCodes()
+  let index = "index Data"
+
+  return {
+    props: {
+      index: index,
+      codes: codes
+    }
+  }
+}
+
+export default Home;

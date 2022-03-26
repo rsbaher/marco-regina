@@ -1,8 +1,7 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
 import '../node_modules/reactjs-popup/dist/index.css';
-import CardTitle from './CardTitle'
-import Link from 'next/link'
+
 
 export default function Modal(props) {
     let phoneURL = "tel:" + props.hotel.phone
@@ -12,7 +11,7 @@ export default function Modal(props) {
             <Popup trigger={<button type="button" className="button-style button-gold color-light-pink pointer-on-hover">More Details</button>}
                 position="center center" className="modal" modal>
                 <div className="modal-body">
-                    <CardTitle className="text-align-center">{props.title}</CardTitle>
+                    <h3 className="text-align-center">{props.title}</h3>
                     <div className="title-container-two-columns text-align-center">
                         <p>Phone: <a className="title-gold pointer-on-hover" href={phoneURL}>{props.hotel.phone}</a></p>
                         <p><a className="title-gold pointer-on-hover" href={props.hotel.url}>Visit Website</a></p>

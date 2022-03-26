@@ -1,23 +1,8 @@
-import styled from 'styled-components'
-import Subtitle from '../components/subtitle'
 import Link from 'next/link'
 import Floral from '../components/Floral'
-import CardTitle from '../components/CardTitle'
 import React from 'react';
 import Modal from '../components/Modal'
-
-const ChildDiv = styled.div`
-position: relative;
-overflow: hidden;
-z-index: 0;
-
-@media (max-width: 414px) {
-  font-size: 1.2em;
-}
-
-@media (max-width: 375px) {
-  font-size: 1.2em;
-}`
+import Layout from '../components/layout'
 
 export default function Gallery() {
   const hotel1 = process.env.HOTELS[0];
@@ -25,14 +10,14 @@ export default function Gallery() {
   const hotel3 = process.env.HOTELS[2];
   const hotel4 = process.env.HOTELS[3];
   return (
-    <>
+    <Layout h1="Marco &amp; Regina" h2="Wedding Details">
       <section className="content1">
-        <Subtitle style={{ marginBottom: '0.5em' }}>The Details</Subtitle>
+        <h2 style={{ marginBottom: '0.5em' }}>The Details</h2>
 
         <div className="container-three-columns">
 
           <div className="cards-div background-color-light-pink">
-            <CardTitle style={{ textAlign: 'center', }}>Itenerary</CardTitle>
+            <h3 style={{ textAlign: 'center', }}>Itenerary</h3>
             <br />
             <div className="font-taj-bold">The Ceremony</div>
             <div className="color-gold"><span className="bold">Start Time:</span> {process.env.WEDDING_TIME.ceremony}</div>
@@ -43,12 +28,12 @@ export default function Gallery() {
           </div>
 
           <div className="cards-div background-color-light-pink">
-            <CardTitle style={{ textAlign: 'center', }}>Adresses</CardTitle>
+            <h3 style={{ textAlign: 'center', }}>Adresses</h3>
             <br />
-            <div className="title-container-two-columns"><ChildDiv className="font-taj-bold">The Ceremony</ChildDiv>
-              <ChildDiv><a className="title-gold pointer-on-hover" rel="noreferrer"
+            <div className="title-container-two-columns"><div className="child-div font-taj-bold">The Ceremony</div>
+              <div className="child-div"><a className="title-gold pointer-on-hover" rel="noreferrer"
                 href={process.env.CEREMONY_ADDR.url}
-                target="_blank">Directions</a></ChildDiv>
+                target="_blank">Directions</a></div>
             </div>
 
             <div className="color-gold bold">{process.env.CEREMONY_VENUE}</div>
@@ -57,10 +42,10 @@ export default function Gallery() {
             <div className="color-gold">{process.env.CEREMONY_ADDR.l3}</div>
 
             <br />
-            <div className="title-container-two-columns"><ChildDiv className="font-taj-bold">The Reception</ChildDiv>
-              <ChildDiv><a className="title-gold pointer-on-hover" rel="noreferrer"
+            <div className="title-container-two-columns"><div className="child-div font-taj-bold">The Reception</div>
+              <div className="child-div" ><a className="title-gold pointer-on-hover" rel="noreferrer"
                 href={process.env.RECEPTION_ADDR.url}
-                target="_blank">Directions</a></ChildDiv>
+                target="_blank">Directions</a></div>
             </div>
 
             <div className="color-gold bold">  {process.env.RECEPTION_VENUE}</div>
@@ -70,7 +55,7 @@ export default function Gallery() {
           </div>
 
           <div className="cards-div background-color-light-pink">
-            <CardTitle style={{ textAlign: 'center', }}>Meal Options</CardTitle>
+            <h3 style={{ textAlign: 'center', }}>Meal Options</h3>
             <br />
             <div className="font-taj-bold">Chicken Type 1</div>
             <div>Detailed Description of the chicken</div>
@@ -81,18 +66,18 @@ export default function Gallery() {
 
         </div>
         <br />
-        <Link href="/" passHref><CardTitle className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
+        <Link href="/" passHref><h3 className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</h3></Link>
         < br />
       </section>
 
       <section className="content2">
         <Floral />
 
-        <Subtitle style={{ marginBottom: '0.5em', paddingTop: '1em' }}>Hotel Options</Subtitle>
+        <h2 style={{ marginBottom: '0.5em', paddingTop: '1em' }}>Hotel Options</h2>
         <div className="container-two-columns" style={{ maxWidth: '900px', }}>
          
           <div className="cards-div background-color-light-pink">
-            <CardTitle className="text-align-center">{hotel1.name}</CardTitle>
+            <h3 className="text-align-center">{hotel1.name}</h3>
             <div className="title-container-two-columns top-padding-sm" >
               <div className="text-align-right">
                 <div>{hotel1.addr.l1}</div>
@@ -106,7 +91,7 @@ export default function Gallery() {
           </div>
 
           <div className="cards-div background-color-light-pink">
-            <CardTitle className="text-align-center">{hotel2.name}</CardTitle>
+            <h3 className="text-align-center">{hotel2.name}</h3>
             <div className="title-container-two-columns top-padding-sm" >
               <div className="text-align-right">
                 <div>{hotel2.addr.l1}</div>
@@ -121,7 +106,7 @@ export default function Gallery() {
           </div>
 
           <div className="cards-div background-color-light-pink">
-            <CardTitle className="text-align-center">{hotel3.name}</CardTitle>
+            <h3 className="text-align-center">{hotel3.name}</h3>
             <div className="title-container-two-columns top-padding-sm" >
               <div className="text-align-right">
                 <div>{hotel3.addr.l1}</div>
@@ -136,7 +121,7 @@ export default function Gallery() {
           </div>
 
           <div className="cards-div background-color-light-pink">
-            <CardTitle className="text-align-center">{hotel4.name}</CardTitle>
+            <h3 className="text-align-center">{hotel4.name}</h3>
             <div className="title-container-two-columns top-padding-sm" >
               <div className="text-align-right">
                 <div>{hotel4.addr.l1}</div>
@@ -151,9 +136,9 @@ export default function Gallery() {
           </div>
         </div>
         <br />
-        <Link href="/" passHref><CardTitle className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</CardTitle></Link>
+        <Link href="/" passHref><h3 className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</h3></Link>
         <br />
       </section>
-    </>
+    </Layout>
   )
 }
