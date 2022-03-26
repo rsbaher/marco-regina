@@ -1,4 +1,4 @@
-import Floral from '../components/GalleryFloral'
+import Floral from '../components/Floral'
 import Layout from '../components/layout'
 
 export default function Gallery() {

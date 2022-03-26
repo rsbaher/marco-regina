@@ -41,21 +41,4 @@ function RSVP(pageProps) {
   )
 }
 
-export async function getStaticProps(props) {
-
-  // fetch data here
-  const data = await getSheetData()
-  console.log("rsvp.staticprops data[0]: ", data[1]);
-  console.log("rsvp.staticprops props: ", props);
-  if(props.index){
-    console.log("props.index was read: ", props.index);
-  }
-  return {
-    props: {
-      rsvp: "rsvp data",
-      data: data[1],
-    }
-  }
-}
-
 export default RSVP

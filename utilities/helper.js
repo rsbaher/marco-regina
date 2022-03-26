@@ -1,44 +1,4 @@
-import { auth, ACC_T } from './auth'
-import { google } from 'googleapis'
 import axios from './axios'
-
-export async function getSheetData() {
-  let data = { test: "test" };
-  const sheets = google.sheets({ version: 'v4', auth });
-  const range = `rsvp!A2:H9`;
-
-  const response = await sheets.spreadsheets.values.get({
-    spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET,
-    range,
-  });
-
-  data = response.data.values;
-  console.log("Loaded data");
-  const FormatedData = formatData(data);
-
-  return FormatedData
-}
-
-function formatData(data) {
-  const formatted = [];
-  console.log("Formatting data...")
-  data.forEach(function (el) {
-    let obj = {
-      fName: String(el[0]),
-      lName: String(el[1]),
-      email: String(el[2]),
-      rsvp: parseInt(el[3]),
-      meal: parseInt(el[4]),
-      hotelRooms: parseInt(el[5]),
-      isUnder12: parseInt(el[6]),
-      isUnder21: parseInt(el[7]),
-    }
-    formatted.push(obj)
-  })
-  return formatted;
-}
-
-
 
 // Accepts an array of guests
 function dataFormat(data, mode = 1) {
@@ -167,14 +127,14 @@ export async function getGuests(email = null) {
   }
 }
 
-export async function updateGuests(data) {
+/* export async function updateGuests(data) {
   // todo foreach guest, update guest
   let formattedData = dataFormat(data, 3)
   try {
     let resArr = [];
     formattedData.forEach(function (guest) {
       let URL = "/guest/" + guest.id
-      let obj = await axios.put(URL, guest);
+      const obj = await axios.put(URL, guest);
       console.log("updated guest: ", obj)
       resArr.push(obj)
     })
@@ -184,4 +144,4 @@ export async function updateGuests(data) {
     return { error: "Error occured while updating guest data" }
   }
 
-}
+} */
