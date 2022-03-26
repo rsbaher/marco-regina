@@ -2,7 +2,7 @@ import { google } from 'googleapis'
 
 const googleService = JSON.parse(process.env.NEXT_PUBLIC_GOOGLE_CRED)
 let ACC_T = ""
-console.log("ACC_T: ", ACC_T);
+//console.log("ACC_T 1: ", ACC_T);
 const auth = new google.auth.JWT(
     googleService.client_email,
     null,
@@ -20,7 +20,7 @@ auth.authorize(function (err, tokens) {
     } else {
         let accessToken = tokens.access_token;
         ACC_T = accessToken
-        console.log("ACC_T: ", ACC_T);
+        //console.log("ACC_T 2: ", ACC_T);
     }
 });
 

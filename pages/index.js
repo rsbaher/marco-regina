@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useState } from "react"
 import OurStory from '../components/OurStory'
 import DetailsSection from '../components/DetailsSection'
 import Floral from '../components/Floral'
@@ -8,10 +8,10 @@ import Layout from '../components/layout'
 import GetInvitationForm from '../components/GetInvitationForm'
 import {getCodes} from '../utilities/helper'
 
-function Home(pageProps) {
-  const [ context, setContext ] = React.useState(Context)
+function Home() {
+  const [context, setContext] = useContext(Context)
   console.log("index context: ", context)
-  console.log("index props: ", pageProps)
+  
   return (
     <Layout h1="Marco &amp; Regina" h2="">
       <section className="content1">
@@ -39,14 +39,13 @@ function Home(pageProps) {
 }
 
 export async function getStaticProps(props) {
-  const data = await getCodes()
-  console.log("rsvp.staticprops data[0]: ", data[0]);
-  console.log("rsvp.staticprops props: ", props);
+  let codes = await getCodes()
+  let index = "index Data"
+
   return {
     props: {
-      index: "index Data",
-      codes: data,
-      email: ""
+      index: index,
+      codes: codes
     }
   }
 }

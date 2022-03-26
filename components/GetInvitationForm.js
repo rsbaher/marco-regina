@@ -19,13 +19,10 @@ const validate = values => {
   return errors;
 };
 
-function GetInvitationForm(props) {
+function GetInvitationForm() {
   const [context, setContext] = useContext(Context)
-  console.log("invitationForm props: ", props);
-  console.log("invitationForm contect: ", context);
- // const [open, setOpen] = useState(false);
- // const closeModal = () => setOpen(false);
-  const Children = props.children
+  console.log("invitationForm context: ", context);
+
   const router = useRouter()
   return (
     <>
@@ -43,14 +40,18 @@ function GetInvitationForm(props) {
           return errors;
         }}
         onSubmit={(values, errors) => {
-          alert(JSON.stringify(values, null, 2));
           let cont = context
-          cont.email = values.email
+          console.log("invitation context: ", cont)
+          let codes = context.codes
+          let code = codes.filter(function(el){
+            return el.email == values.email
+            })
+          cont.selected = code[0]
+          
+          console.log("retreived invitation code: ", cont.selected.code)
           setContext(cont)
-          //getcode
-         
-          // go to /rsvp/code
-          router.push("/rsvp")
+          // redirecting to invdividual invitation
+          router.push("/invitation/" + cont.selected.code)
         }}
       >
         <div className="form-container">
@@ -63,33 +64,13 @@ function GetInvitationForm(props) {
               /></span>
             <br /><ErrorMessage className="error-form-input" name="email" />
             <br />
-            <button className="button-style button-gold color-pink form-button" type="submit">Get Invitation</button>
+            <button className="button-style button-gold color-light-pink form-button" type="submit">Get Invitation</button>
           </Form>
         </div>
       </Formik>
 
-      <Popup open={open} closeOnDocumentClick onClose={closeModal}
-        position="center center" className="modal2" modal>
-        <div className="modal2-body">
-          <FormRsvp2 formContx={context}/>
-        </div>
-      </Popup>
     </>
   )
-}
-
-export async function getStaticProps(props) {
-
-  // fetch data here
-  const data = await getSheetData()
-  console.log("rsvp.staticprops data[0]: ", data[0]);
-  console.log("rsvp.staticprops props: ", props);
-  return {
-    props: {
-      data: data[0],
-      email: ""
-    }
-  }
 }
 
 export default  GetInvitationForm

@@ -5,9 +5,8 @@ import Popup from 'reactjs-popup';
 import '../node_modules/reactjs-popup/dist/index.css';
 
 
-function FormRsvp2() {
-  const [context, setContext] = useContext(Context)
-  //console.log("invitationForm context: ", context);
+function FormRsvp2(props) {
+  console.log("invitationForm props.data: ", props.data);
   const data = {
     guest1: {
       fName: 'Regina',

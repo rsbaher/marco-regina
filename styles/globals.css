@@ -255,7 +255,7 @@ button.form-button {
 }
 
 .content1 {
-  background-color: #fff3e6;
+  background-color: #fff1ed;
   grid-area: content1;
   padding-top: 2em;
   padding-bottom: 10em;
@@ -378,7 +378,7 @@ p.story {
 }
 
 .color-light-gold {
-  color: #fff3e6;
+  color: #fff1ed;
 }
 
 .color-pink {
@@ -466,7 +466,7 @@ div.faded-side-img {
   position: absolute;
   bottom: 0px;
   top: 0px;
-  box-shadow: inset 0px 0px 10px 20px #fff3e6;
+  box-shadow: inset 0px 0px 10px 20px #fff1ed;
   padding-right: 5%;
 }
 
