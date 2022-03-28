@@ -1,120 +1,92 @@
-import { Formik, Field, Form, ErrorMessage } from 'formik'
-import React, { useContext, useState } from "react"
+import ReactDOM from 'react-dom';
 import { Context } from '../utilities/context'
-import Popup from 'reactjs-popup';
+import { Formik, Field, FieldArray, Form, useField, useFormikContext } from 'formik';
+import React, { useContext } from "react"
 import '../node_modules/reactjs-popup/dist/index.css';
 
+const MyField = (props) => {
+  const {
+    values: { Person },
+    touched,
+    setFieldValue,
+  } = useFormikContext();
+  const [field, meta] = useField(props);
 
-function FormRsvp2(props) {
-  console.log("invitationForm props.data: ", props.data);
-  const data = {
-    guest1: {
-      fName: 'Regina',
-      lName: 'Baher',
-      email: 'reginabaher@gmail.com',
-      rsvp: "0",
-      meal: "0",
-      hotelRooms: "0",
-      isUnder12: 0,
-      isUnder21: 0
-    },
-    guest2: {
-      fName: 'Natalie',
-      lName: 'Baher',
-      email: 'reginabaher@gmail.com',
-      rsvp: "0",
-      meal: "0",
-      hotelRooms: "0",
-      isUnder12: 1,
-      isUnder21: 1
+  React.useEffect(() => {
+    // set the value of textC, based on Person
+    if (Person && touched.Person) {
+      setFieldValue(props.name, `Person: ${Person}`);
     }
-  }
+  }, [Person, touched.Person, setFieldValue, props.name]);
+
   return (
     <>
-      <Formik
-        initialValues={{
-          guest1: {
-            fName: 'Regina',
-            lName: 'Baher',
-            email: 'reginabaher@gmail.com',
-            rsvp: '0',
-            meal: '0',
-            hotelRooms: '0',
-            isUnder12: 0,
-            isUnder21: 0
-          },
-          guest2: {
-            fName: 'Natalie',
-            lName: 'Baher',
-            email: 'reginabaher@gmail.com',
-            rsvp: "0",
-            meal: "0",
-            hotelRooms: "0",
-            isUnder12: 1,
-            isUnder21: 1
-          }
-        }}
-        onSubmit={async (values) => {
-          alert(JSON.stringify(values, null, 2));
-        }}
-      >
-        {({ values }) => (
-          <Form>
-            <div className="container-four-columns">
-              <label className="form-input-label2">{values.guest1.fName} {values.guest1.lName}: </label>
-              <Field name="guest1.rsvp" as="select" className="form-input-select">
-                <option value="0">Not Attending</option>
-                <option value="1">Attending</option>
-              </Field>
-              <Field name="guest1.meal" as="select" className="form-input-select">
-                <option value="0">Meal 1</option>
-                <option value="1">Meal 2</option>
-              </Field>
-              <Field name="guest1.hotelRooms" as="select" className="form-input-select">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </Field>
-            </div>
-            <div className="container-four-columns">
-              <label className="form-input-label2">{values.guest2.fName} {values.guest2.lName}: </label>
-              <Field name="guest2.rsvp" as="select" className="form-input-select">
-                <option value="0">Not Attending</option>
-                <option value="1">Attending</option>
-              </Field>
-              <Field name="guest2.meal" as="select" className="form-input-select">
-                <option value="0">Meal 1</option>
-                <option value="1">Meal 2</option>
-              </Field>
-              <Field name="guest2.hotelRooms" as="select" className="form-input-select">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </Field>
-            </div>
-            <div className="text-align-center">
-              <button type="submit" className="button-style button-gold form-button color-light-gold">Save</button>
-            </div>
-          </Form>
-        )}
-      </Formik>
+      <input {...props} {...field} />
+      {!!meta.touched && !!meta.error && <div>{meta.error}</div>}
     </>
-  )
+  );
 }
 
-export async function getServerSideProps(contx){
-  // fetch data here
-  const data = await getSheetData()
-  console.log("rsvpForm2.staticprops data[0]: ", data[0]);
-  console.log("rsvpForm2.staticprops props: ", contx);
+const FormRsvp2 = function (props) {
+  let data = props.data.inv
+  console.log("formRsvp2 data: ", data)
+  return (
+    <div className="form-container">
+      <Formik onSubmit={async (values) => alert(JSON.stringify(values, null, 2))}
+        initialValues={data}>
+        <Form style={{ display: 'grid' }}>
+          <FieldArray
+            name="guests"
+            render={() => (
+              <div>
+                {data.map((g, index) => (
+                  <div className="cards-div cards-margin-bottom background-color-light-pink" key={index}>
+                    <h3>{g.fName + " " + g.lName}</h3>
+                    <Field type="hidden" name={`guests.${index}.id`} value={g.id} />
+                    <br />
+                    <div className='text-align-left'>
+                      <p className='margin-form'>
+                        <label className="form-input-label">Will you be attending?</label>
+                        <Field as="select" className="form-input-select" name={`guests.${index}.rsvp`} value={g.rsvp}>
+                          <option value="">Select</option>
+                          <option value="0">No</option>
+                          <option value="1">Yes</option>
+                        </Field>
+                      </p>
 
-  return {
-    props: {
-      data: data[0],
-      email: ""
-    }
-  }
+                      <p className='margin-form'>
+                        <label className="form-input-label">What would you like to eat?</label>
+                        <Field as="select" className="form-input-select" name={`guests.${index}.meal`} value={g.meal}>
+                          <option value="">Select</option>
+                          <option value="chicken">Chicken</option>
+                          <option value="beef">Beef</option>
+                          <option value="fish">Fish</option>
+                        </Field>
+                      </p>
 
+                      <p className='margin-form'>
+                        <label className="form-input-label">{"How many hotel rooms will "+ g.fName + " be requiring?"}</label>
+                        <Field as="select" className="form-input-select" name={`guests.${index}.hotelRooms`} value={g.hotelRooms}>
+                          <option value="">Select</option>
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </Field>
+                      </p>
+                    </div>
+                  </div>
+                ))}
+
+              </div>
+            )}
+          />
+          <button className="button-style button-gold color-light-pink form-button" type="submit">Submit</button>
+        </Form>
+
+      </Formik>
+    </div>
+
+  )
 }
 
 export default FormRsvp2

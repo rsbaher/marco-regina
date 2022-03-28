@@ -8,17 +8,25 @@ function dataFormat(data, mode = 1) {
     case 1:
       data.forEach(function (guest) {
         let fullname = guest.fullname.split(" ")
-        let meal = parseInt(guest.rsvpMeal)
+        let meal = ""
+        let hotel = ""
+        if(guest.rsvpMeal != null && guest.rsvpMeal != undefined && String(guest.rsvpMeal) != "undefined"){
+          meal = String(guest.rsvpMeal)
+        }
+        if(guest.hotelRooms != null && guest.hotelRooms != undefined && String(guest.hotelRooms) != "undefined"){
+          hotel = String(guest.hotelRooms)
+        }
+        console.log("meal: ", meal)
         let obj = {
           fName: String(fullname[0]),
           lName: String(fullname[1]),
           email: String(guest.email),
-          rsvp: parseInt(guest.rsvpStatus),
-          meal: String(process.env.MEAL_OPTIONS[meal]),
-          hotelRooms: parseInt(guest.hotelRooms),
+          rsvp: String(guest.rsvpStatus),
+          meal: meal,
+          hotelRooms: hotel,
           isUnder12: parseInt(guest.isUnder12),
           isUnder21: parseInt(guest.isUnderage),
-          id: guest.id
+          id: String(guest.id)
         }
         formatted.push(obj)
       })
@@ -35,14 +43,14 @@ function dataFormat(data, mode = 1) {
     case 3:
       data.forEach(function (guest) {
         let obj = {
-          fullname: guest.fName + " " + guest.lName,
-          rsvpStatus: guest.rsvp,
-          email: guest.email,
-          rsvpMeal: guest.meal,
-          isUnder12: guest.isUnder12,
-          id: guest.id,
-          isUnderage: guest.isUnder21,
-          hotelRooms: guest.hotelRooms
+          fullname: String(guest.fName + " " + guest.lName),
+          rsvpStatus: parseInt(guest.rsvp),
+          email: String(guest.email),
+          rsvpMeal: String(guest.meal),
+          isUnder12: parseInt(guest.isUnder12),
+          id: String(guest.id),
+          isUnderage: parseInt(guest.isUnder21),
+          hotelRooms: parseInt(guest.hotelRooms)
         }
         formatted.push(obj)
       })
