@@ -38,7 +38,7 @@ export default function Invitation(pageProps) {
         }
     }
     return (
-        <Layout h1="R.S.V.P" h2="">
+        <Layout h1="- R . S . V . P -" h2="">
             <section className="content1">
                 <div className="text-align-center">
                     <InvitationDiv />
