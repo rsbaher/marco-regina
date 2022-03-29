@@ -14,6 +14,10 @@ body {
   font-family: "El Messiri", sans-serif;
 }
 
+button {
+  min-width: 181px;
+}
+
 h1.title {
   color: #ffe9e3;
   font-family: "Great Vibes", cursive;
@@ -50,6 +54,10 @@ h2.subtitle {
 
 h2.title {
   margin-bottom: 0.2em;
+}
+
+h2.title-floral {
+  margin-bottom: 0.2em;
   margin-top: 0em;
   padding-top: 2em;
 }
@@ -62,7 +70,27 @@ img.floral {
   transform: translate3d(-50%, -50%, 0) rotate(180deg);
   position: absolute;
 }
-
+.width-50 {
+  width: 50%;
+}
+.width-60 {
+  width: 60%;
+}
+.width-100{
+  width: 100%;
+}
+.width-70 {
+  width: 70%;
+}
+.width-80{
+  width: 80%;
+}
+.padding-top-1{
+  padding-top: 1%;;
+}
+.padding-bottom-1{
+  padding-bottom: 1%;;
+}
 .child-div{
   position: relative;
 overflow: hidden;
@@ -123,12 +151,11 @@ div.form-container {
     border: 1px solid transparent;
     border-radius: 4px;
     box-shadow: 0 1px 3px 0 #cba135;
-    font-size: 0.9em;
-    height: 2em;
+    font-size: 1em;
+    height: 1.5em;
     outline: none; 
     transition: box-shadow 150ms ease;
     padding: 0em 0.5em;
-    width: 100%;
 }
 
 button.form-button {
@@ -160,6 +187,15 @@ button.form-button {
 
 
 .title-container-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  margin: auto;
+  max-width: 700px;
+}
+
+title-container-two-columns-modal {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -249,7 +285,20 @@ button.form-button {
   overflow: hidden;
   z-index: 0;
 }
+.column-content-div-left{
+  z-index: 0;
+  position: relative;
+  text-align: left;
+}
+.column-content-div-right{
+  z-index: 0;
+  position: relative;
+  text-align: right;
+}
 
+.cards-margin-bottom{
+  margin-bottom: 1.5em;
+}
 .content0 {
   grid-area: "content0";
 }
@@ -289,7 +338,9 @@ button.form-button {
 .text-align-center {
   text-align: center;
 }
-
+.margin-bottom-1{
+  margin-bottom: 1em;
+}
 .text-align-left {
   text-align: left;
 }
@@ -372,6 +423,10 @@ p.story {
   background-color: #ffdfd5;
   color: #cba135;
 }
+.button-light-gold-hover:hover {
+  background-color: #fff1ed;
+  color: #cba135;
+}
 
 .color-light-pink {
   color: #ffdfd5;
@@ -440,6 +495,9 @@ p.story {
 .pointer-on-hover:hover {
   cursor: pointer;
 }
+p.margin-form {
+  margin: 0.5em;
+}
 
 .container-img-two-columns {
   display: grid;
@@ -505,6 +563,13 @@ div.faded-side-img {
     margin: auto;
     max-width: 400px;
     padding: 1em;
+  }
+
+  .column-content-div-left{
+    text-align: center;
+  }
+  .column-content-div-right{
+    text-align: center;
   }
 
   .container-three-columns {

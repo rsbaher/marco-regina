@@ -12,9 +12,9 @@ export default function Modal(props) {
                 position="center center" className="modal" modal>
                 <div className="modal-body">
                     <h3 className="text-align-center">{props.title}</h3>
-                    <div className="title-container-two-columns text-align-center">
-                        <p>Phone: <a className="title-gold pointer-on-hover" href={phoneURL}>{props.hotel.phone}</a></p>
-                        <p><a className="title-gold pointer-on-hover" href={props.hotel.url}>Visit Website</a></p>
+                    <div className="title-container-two-columns-modal text-align-center padding-top-1 padding-bottom-1">
+                        <span style={{paddingRight: '25%'}}>Phone: <a className="title-gold pointer-on-hover" href={phoneURL}>{props.hotel.phone}</a></span>
+                        <span><a className="title-gold pointer-on-hover" href={props.hotel.url}>Visit Website</a></span>
                     </div>
                     <div className="title-gold text-align-center" style={{fontSize: '1.3em'}}>Ammenities</div>
                     <ul className="two-columns">
@@ -24,6 +24,7 @@ export default function Modal(props) {
                     </ul>
 
                     <p className="text-align-center">Approx. price for Sept. 4 to 5 without group discount: <span className="title-gold">{props.hotel.price}</span></p>
+                    <p className="text-align-center">{props.hotel.note}</p>
 
                 </div>
             </Popup>
