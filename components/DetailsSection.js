@@ -9,7 +9,7 @@ export default function DetailsSection ({ children }) {
 
   return (
     <>
-        <h2 className="title">
+        <h2 className="title-floral">
           Our Wedding
         </h2>
         

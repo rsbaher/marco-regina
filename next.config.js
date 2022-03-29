@@ -6,8 +6,11 @@ const WEDDING_TIME = {
     dinner: "7:30 pm",
     photo: "4:30 pm"
 }
-const MEAL_OPTIONS = {0: "Chicken 1", 1: "Chicken 2"}
-const MEAL_DESC = {0: "Description of Chicken 1", 1: "Description of Chicken 2"}
+const MEAL_OPTIONS = [
+    {title: "Chicken 1", desc: "Description of Chicken 1"},
+    {title: "Chicken 2", desc: "Description of Chicken 2"}
+] 
+
 const CEREMONY_VENUE = "St. Mary Coptic Church"
 const RECEPTION_VENUE = "Jacaranda Country Club"
 
@@ -39,12 +42,13 @@ const HOTELS = [
     phone: "888-236-2427",
     url: "https://www.plantationcourtyard.com",
     amenities: ["10.45 USD Breakfast", "Free Internet Access", "Free Parking",  "Airport Shuttle from FLL Airport", "Digital Check-In", "Mobile Key", "Outdoor Pool", "Gym"],
-    price: "160 USD"
+    price: "160 USD",
+    note: ""
 },
 {
     name: "Hyatt Place Plantation",
     addr: {
-        l1: "8530 West Broward Boulevard", 
+        l1: "8530 West Broward Blv", 
         l2: "Plantation", 
         l3: "FL 33324", 
         url: "https://goo.gl/maps/cH3NPsCFGbJsMoCZ8",
@@ -53,7 +57,8 @@ const HOTELS = [
     phone: "954-370-2220",
     url: "https://www.hyatt.com/en-US/hotel/florida/hyatt-place-fort-lauderdale-plantation/fllzp",
     amenities: ["Free Breakfast", "Free Internet Access", "Free Parking", "Pet-Friendly", "Digital Check-In", "Outdoor Pool", "Gym"],
-    price: "130 USD"
+    price: "200 USD",
+    note: "Hyatt members get cheapest rate (approx. 170 USD). Due to the wedding being on Labour Day weekend, this hotel requires a minimum of 2 nights."
 },
 {
     name: "Renaissance Plantation",
@@ -67,7 +72,8 @@ const HOTELS = [
     phone: "954-308-4502",
     url: "https://www.renaissanceplantation.com",
     amenities: ["8 USD Breakfast", "Free Internet Access", "Parking 10 USD Daily", "Digital Check-In", "Outdoor Pool", "Gym"],
-    price: "270 USD"
+    price: "270 USD",
+    note: ""
 },
 {
     name: "Sheraton Suites Plantation",
@@ -82,6 +88,7 @@ const HOTELS = [
     url: "https://www.marriott.com/fllsi",
     amenities: ["10-12 USD Breakfast", "Free Internet Access", "Free Parking", "Pet Friendly", "Digital Check-In", "Mobile Key", "Outdoor Pool", "Gym"],
     price: "195 USD",
+    note:""
 },
 ]
 
@@ -96,7 +103,6 @@ module.exports = {
     WEDDING_DATE: WEDDING_DATE,
     WEDDING_TIME: WEDDING_TIME,
     MEAL_OPTIONS: MEAL_OPTIONS,
-    MEAL_DESC: MEAL_DESC,
     CEREMONY_ADDR: CEREMONY_ADDR,
     RECEPTION_ADDR: RECEPTION_ADDR,
     HOTELS: HOTELS,

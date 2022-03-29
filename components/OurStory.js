@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import HeartSvg from '../public/img/heart.svg'
 import SideImg from '../public/img/sideImg.jpeg'
 
 
@@ -27,7 +26,7 @@ export default function OurStory({ children }) {
             <br />
             <span className="text-align-center">
               <Link href="/gallery" className="pointer-on-hover" passHref>
-                <button type="button" className="button-style button-gold button-pink-hover color-light-gold">Gallery</button>
+                <button type="button" className="button-style button-gold button-light-gold-hover color-light-gold">Gallery</button>
               </Link>
             </span>
           </p>

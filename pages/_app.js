@@ -6,7 +6,7 @@ import { Context } from '../utilities/context'
 
 const MyApp = ({Component, pageProps}) => {
   const [ context, setContext ] = React.useState(pageProps)
-  console.log("myApp context: ", context);
+
   return (
     <Context.Provider value={[context, setContext]}>
     <Head>
