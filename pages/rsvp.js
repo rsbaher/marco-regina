@@ -46,7 +46,7 @@ export default function Gallery() {
         <h2 className="title-floral">R S V P</h2>
         <div className="container-two-columns-750break">
           <iframe className="cards-div background-color-light-pink" src="https://docs.google.com/forms/d/e/1FAIpQLSe4T6BwFCA3Bw8TAhbWgqu9vuVdW3H3UiENOB3LnKN3WaCJXA/viewform?embedded=true"
-            width="450" height="1605" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            width="450" height="1605">Loading…</iframe>
 
           <div className="hide-750break">
             <Image src={SideImg3} alt="" />
