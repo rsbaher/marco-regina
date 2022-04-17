@@ -25,8 +25,8 @@ export default function OurStory({ children }) {
             <br />
             <br />
             <span className="text-align-center">
-              <Link href="/gallery" className="pointer-on-hover" passHref>
-                <button type="button" className="button-style button-gold button-light-gold-hover color-light-gold">Gallery</button>
+              <Link href="#" className="pointer-on-hover" passHref>
+                <button type="button" className="button-style button-gold button-light-gold-hover color-light-gold">Gallery Coming Soon</button>
               </Link>
             </span>
           </p>

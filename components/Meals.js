@@ -11,8 +11,8 @@ export default function Hotels(props) {
         < >
           {meals.map((meal, index) => (
             <div className="margin-bottom-1" key={index}>
-             <div className="font-taj-bold">{meal.title}</div>
-             <div>{meal.desc}</div>
+             <h4>{meal.title}</h4>
+             <p className="margin-top-0 color-gold">{meal.desc}</p>
             </div>
           )
           )}
