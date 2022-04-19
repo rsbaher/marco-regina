@@ -27,6 +27,13 @@ h1.title {
   margin-top: 3.3em;
 }
 
+h4 {
+  font-family: "Great Vibes", cursive;
+  margin: 0 0 0.2em 0;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
 h3 {
   font-family: 'Sansita Swashed', cursive;
   font-size: 1.5em;
@@ -62,6 +69,10 @@ h2.title-floral {
   padding-top: 2em;
 }
 
+.font-great-vibes{
+  font-family: "Great Vibes", cursive;
+}
+
 img.floral {
   width: 50%;
   max-width: 35em;
@@ -91,10 +102,17 @@ img.floral {
 .padding-bottom-1{
   padding-bottom: 1%;;
 }
+
 .child-div{
   position: relative;
 overflow: hidden;
 z-index: 0;
+}
+h4.child-div{
+  position: relative;
+overflow: hidden;
+z-index: 0;
+width: 150px;
 }
 
 .title-container {
@@ -175,6 +193,16 @@ button.form-button {
     "content3";
 }
 
+.container-one-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  margin: auto;
+  max-width: 900px;
+  padding: 1em;
+}
+
 .container-two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -185,14 +213,25 @@ button.form-button {
   padding: 1em;
 }
 
-
-.title-container-two-columns {
+.container-two-columns-750break {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 1em;
   margin: auto;
+  max-width: 900px;
+  padding: 1em;
+}
+
+
+.title-container-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0.5em;
+  margin: auto;
   max-width: 700px;
+  line-height: 2em;
 }
 
 title-container-two-columns-modal {
@@ -340,6 +379,13 @@ title-container-two-columns-modal {
 }
 .margin-bottom-1{
   margin-bottom: 1em;
+}
+.margin-top-0{
+  margin-top: 0;
+}
+
+.margin-bottom-half{
+  margin-bottom: 0.5em;
 }
 .text-align-left {
   text-align: left;
@@ -541,6 +587,22 @@ div.faded-side-img {
   .img-column {
     margin-right: -22px;
     margin-top: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container-two-columns-750break {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    margin: auto;
+    max-width: 500px;
+    padding: 1em;
+    height: 1650px;
+  }
+  .hide-750break{
+    display: none;
   }
 }
 

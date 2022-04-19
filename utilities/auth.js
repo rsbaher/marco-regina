@@ -8,7 +8,8 @@ const auth = new google.auth.JWT(
     null,
     googleService.private_key,
     ['https://www.googleapis.com/auth/spreadsheets', 'https://mail.google.com/', 'https://www.googleapis.com/auth/firebase.database']);
-//authenticate request
+
+    //authenticate request
 auth.authorize(function (err, tokens) {
     if (err) {
         console.error(err)
@@ -18,11 +19,27 @@ auth.authorize(function (err, tokens) {
         console.log("Provided service account does not have permission to generate access tokens.");
         return
     } else {
-        let accessToken = tokens.access_token;
-        ACC_T = accessToken
-        //console.log("ACC_T 2: ", ACC_T);
+        //let accessToken = tokens.access_token;
+        ACC_T = tokens
+        console.log("tokens 1: ", tokens);
     }
 });
 
+export default async function getToken(){
+    return auth.authorize(function (err, tokens) {
+        if (err) {
+            console.error(err)
+            console.log(err);
+            return;
+        } else if (tokens.access_token === null) {
+            console.log("Provided service account does not have permission to generate access tokens.");
+            return
+        } else {
+            //let accessToken = tokens.access_token;
+            ACC_T = tokens.access_token
+            console.log("ACC_T 2: ", ACC_T);
+        }
+    });
+}
 
-export default {auth, ACC_T};
+//export default {auth, ACC_T, getToken};

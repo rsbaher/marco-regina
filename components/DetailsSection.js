@@ -5,7 +5,9 @@ import RingsSvg from '../public/img/rings-colour.svg'
 import ArchSvg from '../public/img/arch-tan.svg'
 
 export default function DetailsSection ({ children }) {
+  console.log("Wedding date: ", process.env.WEDDING_DATE)
   const wedDate = new Date(process.env.WEDDING_DATE);
+  console.log("Wedding date: ", wedDate.toDateString())
 
   return (
     <>

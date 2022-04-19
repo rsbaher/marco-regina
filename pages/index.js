@@ -23,7 +23,7 @@ function Home() {
               </button>
             </Link></span>
           <span className="column-content-div-left">
-            <Link href="https://forms.gle/fFWzJy9GD32GVmWh7/" target="_blank" passHref>
+            <Link href="/rsvp/" target="_blank" passHref>
               <button type="button" onClick="" className="pointer-on-hover button-style button-gold color-light-pink">
                 &nbsp;RSVP&nbsp;
               </button>

@@ -1,14 +1,15 @@
 const WEB_TITLE="Marco & Regina"
-const WEDDING_DATE="2022-09-04"
+const WEDDING_DATE="Sep 04 2022"
 const WEDDING_TIME = {
-    ceremony: "3:00 pm",
-    cocktail: "6:30 pm",
-    dinner: "7:30 pm",
+    ceremony: "2:30 pm",
+    cocktail: "6:00 pm",
+    dinner: "7:00 pm",
     photo: "4:30 pm"
 }
 const MEAL_OPTIONS = [
-    {title: "Chicken 1", desc: "Description of Chicken 1"},
-    {title: "Chicken 2", desc: "Description of Chicken 2"}
+    {title: "Chicken Delmonico", desc: "Roasted Chicken Breast with Red Peppers & Artichoke Hearts, Topped with Creamy Gotgonzola Sauce."},
+    {title: "Crusted Tilapia", desc: "Cuban Style, Almond Crusted Tilapia Fillet, Topped with Pineapple-Jalapeno Salsa."},
+    {title: "Chicken Chasseur", desc: "Roasted Chicken Breast with Tomato, Mushroom, & Onion, Topped with Demi-Glaze Sauce."}
 ] 
 
 const CEREMONY_VENUE = "St. Mary Coptic Church"
@@ -92,8 +93,6 @@ const HOTELS = [
 },
 ]
 
-HOTEL_DISCOUNT = { key: 0, code: "XYZ1", percent: 15}
-
 module.exports = {
   reactStrictMode: true,
   env: {
@@ -106,7 +105,6 @@ module.exports = {
     CEREMONY_ADDR: CEREMONY_ADDR,
     RECEPTION_ADDR: RECEPTION_ADDR,
     HOTELS: HOTELS,
-    HOTEL_DISCOUNT: HOTEL_DISCOUNT
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
