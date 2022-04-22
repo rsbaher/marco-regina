@@ -51,6 +51,7 @@ h2 {
 }
 h2.smaller{
   font-size: 4.5em;
+  margin-bottom: 0.1em;
 }
 h2.subtitle {
   color: #cba135;
@@ -305,6 +306,10 @@ title-container-two-columns-modal {
 
 .width95 {
   width: 95%;
+}
+.dividerImg {
+  max-width: 75%;
+  margin-bottom: 0.5em;
 }
 
 .background {
@@ -711,6 +716,10 @@ div.faded-side-img {
 
   .text-column {
     margin-top: -100px;
+  }
+
+  .dividerImg {
+    max-width: 100%;
   }
 }
 
