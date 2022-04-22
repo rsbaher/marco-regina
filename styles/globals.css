@@ -49,7 +49,10 @@ h2 {
   text-align: center;
   margin-bottom: 5%;
 }
-
+h2.smaller{
+  font-size: 4.5em;
+  margin-bottom: 0.1em;
+}
 h2.subtitle {
   color: #cba135;
   font-weight: lighter;
@@ -304,6 +307,10 @@ title-container-two-columns-modal {
 .width95 {
   width: 95%;
 }
+.dividerImg {
+  max-width: 75%;
+  margin-bottom: 0.5em;
+}
 
 .background {
   background-image: url("/img/Cover-Final.png");
@@ -379,6 +386,7 @@ title-container-two-columns-modal {
   grid-area: content3;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
+  height: 8em;
 }
 .sideContent {
   width: 100%;
@@ -549,6 +557,12 @@ p.story {
   }
 }
 
+@media (max-width: 540px) {
+  h2.smaller {
+    font-size: 3.5em;
+  }
+}
+
 @media (max-width: 885px) {
   .container-three-columns {
     display: grid;
@@ -702,6 +716,10 @@ div.faded-side-img {
 
   .text-column {
     margin-top: -100px;
+  }
+
+  .dividerImg {
+    max-width: 100%;
   }
 }
 

@@ -1,25 +1,18 @@
 import Link from 'next/link'
-import Floral from '../components/Floral'
 import React from 'react';
 import Layout from '../components/layout'
-import Itenerary from '../components/Itenerary';
-import Addresses from '../components/Addresses'
-import Meals from '../components/Meals'
 import Image from 'next/dist/client/image';
-import SideImg from '../public/img/engagement/wagon-portrait2.jpg'
-import SideImg2 from '../public/img/engagement/TruckBench-cropped4.jpg'
-import SideImg3 from '../public/img/engagement/TruckBenchHandingFlowers.JPG'
-import SideImg4 from '../public/img/engagement/withFuzzy-cropped.jpg'
-
+import divider from '../public/img/divider.png'
 export default function Gallery() {
-
   return (
     <Layout h1="Marco &amp; Regina" h2="">
-      <section className="content1 padding-bottom-2">
-        <h2>R . S . V . P</h2>
+      <section className="content1">
+        <h2 className="color-gold smaller">R . S . V . P</h2>
+      
         <div className="container-one-column">
+        <div className="dividerImg"><Image src={divider} /></div>
           <iframe className="cards-div background-color-light-pink" src="https://docs.google.com/forms/d/e/1FAIpQLSe4T6BwFCA3Bw8TAhbWgqu9vuVdW3H3UiENOB3LnKN3WaCJXA/viewform?embedded=true"
-            width="550" height="1605">Loading…</iframe>
+            width="365" height="1620">Loading…</iframe>
         </div>
 
         <br />
