@@ -15,39 +15,13 @@ export default function Gallery() {
 
   return (
     <Layout h1="Marco &amp; Regina" h2="">
-      <section className="content1">
-        <h2 style={{ marginBottom: '0.5em' }}>The Details</h2>
-
-        <div className="container-three-columns">
-
-          <div className="cards-div background-color-light-pink">
-            <Itenerary />
-          </div>
-
-          <div className="cards-div background-color-light-pink">
-            <Addresses />
-          </div>
-
-          <div className="cards-div background-color-light-pink">
-            <h3 style={{ textAlign: 'center', }}>Meal Options</h3>
-            <br />
-            <Meals />
-          </div>
-
-        </div>
-
-        <br />
-        <Link href="/" passHref><h3 className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</h3></Link>
-        < br />
-      </section>
-
-      <section className="content2 padding-bottom-2" >
-        <Floral />
-        <h2 className="title-floral">R . S . V . P</h2>
+      <section className="content1 padding-bottom-2">
+        <h2>R . S . V . P</h2>
         <div className="container-one-column">
           <iframe className="cards-div background-color-light-pink" src="https://docs.google.com/forms/d/e/1FAIpQLSe4T6BwFCA3Bw8TAhbWgqu9vuVdW3H3UiENOB3LnKN3WaCJXA/viewform?embedded=true"
             width="550" height="1605">Loading…</iframe>
         </div>
+
         <br />
         <Link href="/" passHref><h3 className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</h3></Link>
         < br />
