@@ -221,8 +221,29 @@ button.form-button {
   margin: auto;
   max-width: 900px;
   padding: 1em;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
 }
 
+.container-one-column{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  margin: auto;
+  max-width: 900px;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+section.padding-bottom-2 {
+  padding-bottom: 2em;
+}
 
 .title-container-two-columns {
   display: grid;
@@ -601,6 +622,10 @@ div.faded-side-img {
     max-width: 500px;
     padding: 1em;
     height: 1650px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
   }
   .hide-750break{
     display: none;

@@ -41,19 +41,12 @@ export default function Gallery() {
         < br />
       </section>
 
-      <section className="content2">
+      <section className="content2 padding-bottom-2" >
         <Floral />
-        <h2 className="title-floral">R S V P</h2>
-        <div className="container-two-columns-750break">
+        <h2 className="title-floral">R . S . V . P</h2>
+        <div className="container-one-column">
           <iframe className="cards-div background-color-light-pink" src="https://docs.google.com/forms/d/e/1FAIpQLSe4T6BwFCA3Bw8TAhbWgqu9vuVdW3H3UiENOB3LnKN3WaCJXA/viewform?embedded=true"
-            width="450" height="1605">Loading…</iframe>
-
-          <div className="hide-750break">
-            <Image src={SideImg3} alt="" />
-            <Image src={SideImg} alt="" />
-            <Image src={SideImg2} alt="" />
-            <Image src={SideImg4} alt="" />
-          </div>
+            width="550" height="1605">Loading…</iframe>
         </div>
         <br />
         <Link href="/" passHref><h3 className="underline pointer-on-hover" style={{ textAlign: 'center', }}>Back Home</h3></Link>
