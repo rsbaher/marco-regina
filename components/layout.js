@@ -22,11 +22,11 @@ export default function Layout(props) {
                     {Children}
 
                     <footer className="content3">
-                        <div style={{ fontSize: '1.5em', marginTop: '1em' }}>
+                        <div style={{ fontSize: '1.5em', marginTop: '0.5em' }}>
                             { process.env.NEXT_PUBLIC_HASHTAG }
                         </div>
 
-                        <div style={{ color: 'gray', margin: '0.5em 0.5em 1.6em 0.5em' }}>
+                        <div style={{ color: 'gray', margin: '0.5em 0.5em 1em 0.5em' }}>
                             Made with&nbsp;
                             <Image src={LikeSvg} width={15} height={15} alt="Cartoon icon of a red heart"/> by
                             Regina

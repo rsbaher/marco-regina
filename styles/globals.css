@@ -379,6 +379,7 @@ title-container-two-columns-modal {
   grid-area: content3;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
+  height: 8em;
 }
 .sideContent {
   width: 100%;
