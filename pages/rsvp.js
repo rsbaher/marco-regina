@@ -6,7 +6,7 @@ export default function Gallery() {
   return (
     <Layout h1="Marco &amp; Regina" h2="">
       <section className="content1 padding-bottom-2">
-        <h2 class="color-gold" style={{fontSize: '4.5em'}}>R . S . V . P</h2>
+        <h2 className="color-gold" style={{fontSize: '4.5em'}}>R . S . V . P</h2>
         <div className="container-one-column">
           <iframe className="cards-div background-color-light-pink" src="https://docs.google.com/forms/d/e/1FAIpQLSe4T6BwFCA3Bw8TAhbWgqu9vuVdW3H3UiENOB3LnKN3WaCJXA/viewform?embedded=true"
             width="400" height="1620">Loading…</iframe>
