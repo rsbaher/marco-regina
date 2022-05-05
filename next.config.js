@@ -4,12 +4,14 @@ const WEDDING_TIME = {
     ceremony: "2:30 pm",
     cocktail: "6:00 pm",
     dinner: "7:00 pm",
-    photo: "4:30 pm"
+    dance: "8:30 pm",
+    openBar: ["6:30 pm to 7 pm", "7:30 pm to 11 pm"],
 }
 const MEAL_OPTIONS = [
     {title: "Chicken Delmonico", desc: "Roasted Chicken Breast with Red Peppers & Artichoke Hearts, Topped with Creamy Gotgonzola Sauce."},
-    {title: "Crusted Tilapia", desc: "Cuban Style, Almond Crusted Tilapia Fillet, Topped with Pineapple-Jalapeno Salsa."},
-    {title: "Chicken Chasseur", desc: "Roasted Chicken Breast with Tomato, Mushroom, & Onion, Topped with Demi-Glaze Sauce."}
+    {title: "Chicken Chasseur", desc: "Roasted Chicken Breast with Tomato, Mushroom, & Onion, Topped with Demi-Glaze Sauce."},
+    {title: "Vegetarian Meal", desc: "Description Coming Soon."},
+    {title: "Vegan Meal", desc: "Description Coming Soon."}
 ] 
 
 const CEREMONY_VENUE = "St. Mary Coptic Church"
