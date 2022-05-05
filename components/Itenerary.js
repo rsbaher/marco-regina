@@ -14,6 +14,9 @@ export default function Itenerary(props) {
       <h4>The Reception</h4>
       <p className="margin-bottom-half color-gold"><span className="bold">Cocktail Hour:</span> {process.env.WEDDING_TIME.cocktail}</p>
       <p className="margin-top-0 color-gold"><span className="bold">Dinner Start:</span> {process.env.WEDDING_TIME.dinner}</p>
+      <p className="margin-top-0 color-gold"><span className="bold">Dancing Start:</span> {process.env.WEDDING_TIME.dance}</p>
+      <p className="margin-top-0 color-gold"><span className="bold">Open Bar:</span> {process.env.WEDDING_TIME.openBar[0]}<br /> 
+      <span style={{paddingLeft: '4.65em'}}>{process.env.WEDDING_TIME.openBar[1]}</span></p>
     </>
   )
 }
