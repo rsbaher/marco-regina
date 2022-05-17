@@ -10,7 +10,7 @@ export default function Gallery() {
         <h2 className="color-gold smaller">R . S . V . P</h2>
       
         <div className="container-one-column">
-        <div className="dividerImg"><Image src={divider} /></div>
+        <div className="dividerImg"><Image src={divider} alt="digital flowers"/></div>
           <iframe className="cards-div background-color-light-pink" src="https://docs.google.com/forms/d/e/1FAIpQLSe4T6BwFCA3Bw8TAhbWgqu9vuVdW3H3UiENOB3LnKN3WaCJXA/viewform?embedded=true"
             width="365" height="1620">Loading…</iframe>
         </div>

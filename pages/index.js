@@ -15,19 +15,25 @@ function Home() {
         <Floral />
         <DetailsSection />
         <br />
-        <div className="container-two-columns">
-          <span className="column-content-div-right">
+        <div className="container-three-column-button">
+          
             <Link href="/details/" passHref>
-              <button type="button" onClick="" className="pointer-on-hover button-style button-gold color-light-pink">
+              <button type="button" className="pointer-on-hover button-style button-gold color-light-pink">
                 Event Details
               </button>
-            </Link></span>
-          <span className="column-content-div-left">
-            <Link href="/rsvp/" target="_blank" passHref>
-              <button type="button" onClick="" className="pointer-on-hover button-style button-gold color-light-pink">
+            </Link>
+            
+            <Link href="/rsvp/" passHref>
+              <button type="button" className="pointer-on-hover button-style button-gold color-light-pink">
                 &nbsp;RSVP&nbsp;
               </button>
-            </Link></span>
+            </Link>
+
+            <Link href="https://www.myregistry.com/wedding-registry/regina-baher-and-marco-adly-miami-fl/3320151" passHref>
+              <a type="button" target="_blank" rel="noopener noreferrer" className="pointer-on-hover button-style button-gold color-light-pink">
+                &nbsp;Registry&nbsp;
+              </a>
+            </Link>
         </div>
 
       </section>
