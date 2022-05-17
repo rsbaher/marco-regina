@@ -11,7 +11,6 @@ class MyDocument extends Document {
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
             <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Great+Vibes&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
             <link rel="preconnect" as="font" href="/public/fonts/GreatVibes-Regular.ttf"/>
-            <script id="script_myregistry_giftlist_iframe" type="text/javascript" src="https://www.myregistry.com//Visitors/GiftList/iFrames/EmbedRegistry.ashx?r=IluPqWZoa7ZbJVRuhCi9_A2&v=2"></script>
         </Head>
         <body>
           <Main />
