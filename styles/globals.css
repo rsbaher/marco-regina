@@ -9,13 +9,14 @@ body,
   height: 100%;
 }
 
-body {
+body, a {
   margin: 0;
   font-family: "El Messiri", sans-serif;
 }
 
 button {
   min-width: 181px;
+  font-family: "El Messiri", sans-serif;
 }
 
 h1.title {
@@ -480,14 +481,23 @@ p.story {
 .button-style {
   font-weight: bold;
   outline: none;
-  padding: 1em 2em;
+  font-size: 15pt;
+  padding: 0.8em 1.8em;
+  border: #cba135 solid 3px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+a.button-style {
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  padding: 0.8em 1.8em;
   border: #cba135 solid 3px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .button-gold {
   background-color: #cba135;
-  font-size: 1em;
   border: #cba135 solid 3px;
 }
 
@@ -580,7 +590,18 @@ p.story {
 p.margin-form {
   margin: 0.5em;
 }
-
+.container-three-column-button {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  margin: auto;
+  max-width: 700px;
+  padding-left: 1em;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
 .container-img-two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -707,6 +728,20 @@ div.faded-side-img {
     max-width: 700px;
     justify-content: center !important;
     justify-items: center;
+  }
+
+  .container-three-column-button {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin: auto;
+    max-width: 700px;
+    padding-left: 1em;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    font-size: 1em;
   }
 
   .img-column {
