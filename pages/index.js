@@ -29,7 +29,7 @@ function Home() {
               </button>
             </Link>
 
-            <Link href="https://www.myregistry.com/wedding-registry/regina-baher-and-marco-adly-miami-fl/3320151" passHref>
+            <Link href={process.env.REGISTRY_LINK} passHref>
               <a type="button" target="_blank" rel="noopener noreferrer" className="pointer-on-hover button-style button-gold color-light-pink">
                 &nbsp;Registry&nbsp;
               </a>

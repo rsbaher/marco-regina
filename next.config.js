@@ -95,6 +95,8 @@ const HOTELS = [
 },
 ]
 
+const REGISTRY_LINK = "https://www.amazon.com/wedding/regina-baher-marco-adly-miami-september-2022/registry/3SU62FI39K0MS"
+
 module.exports = {
   reactStrictMode: true,
   env: {
@@ -107,6 +109,7 @@ module.exports = {
     CEREMONY_ADDR: CEREMONY_ADDR,
     RECEPTION_ADDR: RECEPTION_ADDR,
     HOTELS: HOTELS,
+    REGISTRY_LINK: REGISTRY_LINK,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
