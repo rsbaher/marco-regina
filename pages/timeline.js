@@ -3,110 +3,126 @@ import React from 'react';
 import Layout from '../components/layout'
 import Image from 'next/image'
 import divider from '../public/img/divider.png';
-import DishIcon from '../public/img/icons/dish.png';
+import CameraIcon from '../public/img/icons/camera-front.png';
+import DanceIcon from '../public/img/icons/dance.png';
+import MartiniIcon from '../public/img/icons/martini.png';
+import ServiceIcon from '../public/img/icons/service.png';
+import WeddingIcon from '../public/img/icons/wedding.png';
+import ChurchIcon from '../public/img/icons/church-with-steeple.png';
+import LocationIcon from '../public/img/wedding-location.svg';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 export default function Gallery() {
   return (
     <Layout h1="Marco &amp; Regina" h2="">
-      <section className="content1">
+      <section className="content1" style={{paddingBottom: '5em'}}>
         <h2 className="color-gold smaller">Timeline</h2>
 
         <div className="container-one-column">
           <div className="dividerImg"><Image src={divider} alt="digital flowers" /></div>
           <div className="width-50">
             <VerticalTimeline layout='1-column-left'>
-              <VerticalTimelineElement
+              <VerticalTimelineElement 
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                date="2011 - present"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                icon={<Image src={DishIcon} alt="dinner dish icon" />}
+                contentStyle={{ background: '#cba135', color: '#fff', marginLeft: '4em'}}
+                contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+                iconStyle={{ background: '#cba135', color: '#fff', width: '3em', height: '3em', padding: '0.5em'}}
+                icon={<Image src={LocationIcon} alt="location pin icon" style={{width: '2em'}} />}
               >
-                <h3 className="vertical-timeline-element-title">Creative Director</h3>
-                <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                <p>
-                  Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-                </p>
+                <h3 className="vertical-timeline-element-title color-white padding-bottom-5">Arrive at Church</h3>
+                <div className='text-align-right'>{ process.env.CEREMONY_ADDR.l1 }</div>
+                <div className='text-align-right'>{ process.env.CEREMONY_ADDR.l2 }</div>
+                <div className='text-align-right'>{ process.env.CEREMONY_ADDR.l3 }</div>
+                <div style={{marginBottom: '-1em'}}>2:30 PM</div>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2010 - 2011"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                icon={<Image src={DishIcon} alt="dinner dish icon" />}
+                contentStyle={{ background: '#ffcaba', color: '#fff', marginLeft: '4em'}}
+                iconStyle={{ background: '#cba135', color: '#fff', width: '3em', height: '3em', padding: '0.3em'}}
+                icon={<Image src={ChurchIcon} alt="Church icon" style={{width: '2em'}} />}
               >
-                <h3 className="vertical-timeline-element-title">Art Director</h3>
-                <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-                <p>
-                  Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-                </p>
+                <h3 className="vertical-timeline-element-title color-white">Ceremony</h3>
+                <div style={{marginBottom: '-1em', paddingTop: '0.5em'}}>3:00 PM</div>
+                
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2008 - 2010"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                icon={<Image src={DishIcon} alt="dinner dish icon" />}
+                contentStyle={{ background: '#ffcaba', color: '#fff', marginLeft: '4em'}}
+                iconStyle={{ background: '#cba135', color: '#fff', width: '3em', height: '3em', padding: '0.5em'}}
+                icon={<Image src={CameraIcon} alt="camera icon" style={{width: '1.8em'}} />}
               >
-                <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-                <p>
-                  User Experience, Visual Design
-                </p>
+                <h3 className="vertical-timeline-element-title color-white">Family Photos</h3>
+                <div style={{marginBottom: '-1em', paddingTop: '0.5em'}}>4:00 PM</div>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2006 - 2008"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                icon={<Image src={DishIcon} alt="dinner dish icon" />}
+                contentStyle={{ background: '#cba135', color: '#fff', marginLeft: '4em' }}
+                iconStyle={{ background: '#cba135', color: '#fff', width: '3em', height: '3em', padding: '0.5em'}}
+                icon={<Image src={LocationIcon} alt="location pin icon" style={{width: '2em'}} />}
               >
-                <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-                <p>
-                  User Experience, Visual Design
-                </p>
+                <h3 className="vertical-timeline-element-title color-white padding-bottom-5">Go to Jacaranda</h3>
+                <div className='text-align-right'>{ process.env.RECEPTION_ADDR.l1 }</div>
+                <div className='text-align-right'>{ process.env.RECEPTION_ADDR.l2 }</div>
+                <div className='text-align-right'>{ process.env.RECEPTION_ADDR.l3 }</div>
+                <div style={{marginBottom: '-1em', paddingTop: '0.5em'}}>4:30 PM</div>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--education"
-                date="April 2013"
-                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                icon={<Image src={DishIcon} alt="dinner dish icon" />}
+                contentStyle={{ background: '#ffcaba', color: '#fff', marginLeft: '4em'}}
+                iconStyle={{ background: '#cba135', color: '#fff', width: '3em', height: '3em', padding: '0.5em'}}
+                icon={<Image src={CameraIcon} alt="camera icon" style={{width: '2em'}} />}
               >
-                <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-                <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-                <p>
-                  Strategy, Social Media
-                </p>
+                <h3 className="vertical-timeline-element-title color-white">Family Photos</h3>
+                <div style={{marginBottom: '-1em', paddingTop: '0.5em'}}>5:00 PM</div>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--education"
-                date="November 2012"
-                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                icon={<Image src={DishIcon} alt="dinner dish icon" />}
+                contentStyle={{ background: '#ffcaba', color: '#fff', marginLeft: '4em'}}
+                iconStyle={{ background: '#cba135', color: '#fff', width: '3em', height: '3em', padding: '0.3em'}}
+                icon={<Image src={MartiniIcon} alt="martini icon" style={{width: '2em'}} />}
               >
-                <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-                <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-                <p>
-                  Creative Direction, User Experience, Visual Design
-                </p>
+                <h3 className="vertical-timeline-element-title color-white">Cocktail Hour</h3>
+                <div style={{marginBottom: '-1em', paddingTop: '0.5em'}}>6:00 PM</div>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--education"
-                date="2002 - 2006"
-                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                icon={<Image src={DishIcon} alt="dinner dish icon" />}
+                contentStyle={{ background: '#ffcaba', color: '#fff', marginLeft: '4em'}}
+                iconStyle={{ background: '#cba135', color: '#fff', width: '3em', height: '3em', padding: '0.3em'}}
+                icon={<Image src={ServiceIcon} alt="dinner dish icon" style={{width: '2em'}} />}
               >
-                <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-                <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-                <p>
-                  Creative Direction, Visual Design
-                </p>
+                <h3 className="vertical-timeline-element-title color-white">Reception Begins</h3>
+                <div style={{marginBottom: '-1em', paddingTop: '0.5em'}}>7:00 PM</div>
               </VerticalTimelineElement>
               <VerticalTimelineElement
-                iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-                icon={<Image src={DishIcon} alt="dinner dish icon" />}
-              />
+                className="vertical-timeline-element--education"
+                contentStyle={{ background: '#ffcaba', color: '#fff', marginLeft: '4em'}}
+                iconStyle={{ background: '#cba135', color: '#fff', width: '3em', height: '3em', padding: '0.3em'}}
+                icon={<Image src={WeddingIcon} alt="bride and groom dancing icon" style={{width: '2em'}} />}
+              >
+                <h3 className="vertical-timeline-element-title color-white">First Dance</h3>
+                <div style={{marginBottom: '-1em', paddingTop: '0.5em'}}>7:10 PM</div>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--education"
+                contentStyle={{ background: '#ffcaba', color: '#fff', marginLeft: '4em'}}
+                iconStyle={{ background: '#cba135', color: '#fff', width: '3em', height: '3em', padding: '0.4em'}}
+                icon={<Image src={DanceIcon} alt="dancing icon" style={{width: '2em'}} />}
+              >
+                <h3 className="vertical-timeline-element-title color-white">Dancing!</h3>
+                <div style={{marginBottom: '-1em', paddingTop: '0.5em'}}>8:30 PM</div>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: '#cba135', color: '#fff', marginLeft: '4em'}}
+                contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+                iconStyle={{ background: '#cba135', color: '#fff', width: '3em', height: '3em', padding: '0.5em'}}
+                icon={<Image src={LocationIcon} alt="location pin icon" style={{width: '2em'}}/>}
+              >
+                <h3 className="vertical-timeline-element-title color-white padding-bottom-5">Home Time!</h3>
+                
+                <div style={{marginBottom: '-1em'}}>11:00 PM</div>
+              </VerticalTimelineElement>
             </VerticalTimeline>
           </div>
         </div>
